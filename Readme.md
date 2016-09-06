@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Андрей Хохлов](https://up.htmlacademy.ru/adaptive/8/user/30867).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Ожерельев](https://up.htmlacademy.ru/adaptive/8/user/29002).
 
 ---
 
