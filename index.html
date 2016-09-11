@@ -5,8 +5,126 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <header class="page-header">
+      <div class="page-header__logo">
+        <a>
+          <img src="#" alt="Pink">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__items">
+            <li class="main-nav__item"><a href="#">Главная</a></li>
+            <li class="main-nav__item"><a href="#">Фотографии</a></li>
+            <li class="main-nav__item"><a href="#">Конкурс</a></li>
+            <li class="main-nav__item"><a href="#">Html Academy</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="intro">
+      <div class="intro__image"></div>
+      <div class="intro__wrap">
+        <a href="#" class="btn btn--download">Скачать приложение</a>
+        <ul class="intro__icons">
+          <li><img class="intro__icon intro__icon--apple" src="#" alt="Логотип Apple"></li>
+          <li><img class="intro__icon intro__icon--android" src="#" alt="Логотип Android"></li>
+          <li><img class="intro__icon intro__icon--windows" src="#" alt="Логотип Windows"></li>
+        </ul>
+        <div class="intro__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</div>
+      </div>
+    </section>
+    <section class="page-titles">
+      <h2 class="page-titles__title">Устали от серости мегаполиса?</h2>
+      <h2 class="page-titles__title">Нам есть, что вам предложить!</h2>
+    </section>
+    <section class="advantages">
+      <ul class="advantages__items">
+        <li class="advantages__item">
+          <h2 class="advantages__title">Поднимает настроение</h2>
+          <div class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</div>
+        </li>
+        <li class="advantages__item">
+          <h2 class="advantages__title">Меняет мир вокруг</h2>
+          <div class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</div>
+        </li>
+        <li class="advantages__item">
+          <h2 class="advantages__title">Заводит новых друзей</h2>
+          <div class="advantages__description">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</div>
+        </li>
+        <!-- Изображение телефона вставить background'ом -->
+      </ul>
+    </section>
+    <section class="reviews">
+      <div class="reviews__items slider">
+        <blockquote class="reviews__item">
+          <cite class="reviews__author-name">Николай Петров</cite>
+          <div class="reviews__quote">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</div>
+        </blockquote>
+        <!-- <blockquote class="reviews__item">
+          <cite class="reviews__author-name"></cite>
+          <div class="reviews__quote"></div>
+        </blockquote>
+        <blockquote class="reviews__item">
+          <cite class="reviews__author-name"></cite>
+          <div class="reviews__quote"></div>
+        </blockquote> -->
+      </div>
+      <ul class="reviews__toggles slider__toggles">
+        <li class="slider__toggle"></li>
+        <li class="slider__toggle"></li>
+        <li class="slider__toggle"></li>
+      </ul>
+    </section>
+    <section class="plans slider">
+      <ul class="plans__items">
+        <li class="plans__item">
+          <header class="plans__header">
+            <div class="plans__name">Стандарт</div>
+            <div class="plans__price">3,99 USD</div>
+            <!-- label добавить через псевдо-элемент -->
+          </header>
+          <div class="plans__feature plans__feature--available">Розовый фильтр</div>
+          <div class="plans__feature plans__feature--available">Смайлики</div>
+          <div class="plans__feature plans__feature--not-available">Комментарии</div>
+        </li>
+        <!-- <li class="plans__item">
+          <header class="plans__header">
+            <div class="plans__name"></div>
+            <div class="plans__price"></div>
+          </header>
+          <div class="plans__feature"></div>
+          <div class="plans__feature"></div>
+          <div class="plans__feature"></div>
+        </li>
+        <li class="plans__item">
+          <header class="plans__header">
+            <div class="plans__name"></div>
+            <div class="plans__price"></div>
+          </header>
+          <div class="plans__feature"></div>
+          <div class="plans__feature"></div>
+          <div class="plans__feature"></div>
+        </li> -->
+      </ul>
+      <ul class="plans__toggles slider__toggles">
+        <li class="slider__toggle"></li>
+        <li class="slider__toggle"></li>
+        <li class="slider__toggle"></li>
+      </ul>
+    </section>
+    <footer class="contact-us">
+      <div class="contact-us__title">Остались вопросы?<br>
+        Свяжитесь с нами!</div>
+      <div class="contact-us__call-to-action">Звоните:</div>
+      <div class="contact-us__phone">+7 (812) 555-66-66</div>
+      <div class="contact-us__call-to-action">Пишите:</div>
+      <div class="contact-us__email"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></div>
+      <div class="contact-us__call-to-action">Приезжайте в гости:</div>
+      <div class="contact-us__address">ул. Большая<br>
+        Конюшенная, 19/8</div>
+      <div class="contact-us__map"></div>
+    </footer>
   </body>
 </html>
