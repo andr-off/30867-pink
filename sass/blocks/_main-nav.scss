@@ -1,0 +1,27 @@
+.main-nav {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+
+  &__toggle {
+    position: absolute;
+    top: -49px;
+    right: 20px;
+  }
+
+  &__items {
+    @include list-reset;
+  }
+
+  & a {
+    display: block;
+    padding: 23px 0;
+    font-size: 1.125em;
+    color: white; // Добавить цвет для всех состояний
+    text-decoration: none;
+    background-color: #283645;
+    box-shadow:
+      inset 0px -1px 0px 0px black,
+      inset 0px 1px 0px 0px rgba(white, 0.15);
+  }
+}
