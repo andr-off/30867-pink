@@ -1,0 +1,41 @@
+.intro {
+  background-color: #1d2631;
+  text-align: center;
+
+  &__image {
+    height: 395px;
+    background:
+      url("../../img/iphone-hand-mobile@1x.png") no-repeat calc(50% - 25px) bottom,
+      url("../../img/bg-back-mobile@1x.jpg") no-repeat center top;
+  }
+
+  &__wrap {
+    padding: 28px 20px 32px;
+  }
+
+  &__icons {
+    @include list-reset;
+    margin-top: 32px;
+    margin-bottom: 28px;
+  }
+
+  &__icon {
+    display: inline-block;
+    vertical-align: bottom;
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  &__description {
+    font-size: 0.875em;
+    font-weight: 300;
+    color: white;
+    line-height: 1.714285714285714;
+  }
+}
