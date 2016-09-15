@@ -1,0 +1,16 @@
+.page-titles {
+  text-align: center;
+  padding: 45px 20px 30px;
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: 300;
+
+    &:first-child {
+      margin-bottom: 35px;
+    }
+  }
+}
