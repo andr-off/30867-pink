@@ -1,0 +1,23 @@
+.reviews {
+  padding: 50px 20px 43px;
+  text-align: center;
+
+  &__item {
+    margin: 0;
+  }
+
+  &__author-name {
+    display: block;
+    margin-bottom: 28px;
+    font-size: 1.125em;
+    line-height: 1.666666666666667;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  &__quote {
+    font-size: 0.875em;
+    line-height: 2.142857142857143;
+    color: #283645;
+  }
+}
