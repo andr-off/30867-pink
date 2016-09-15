@@ -1,0 +1,27 @@
+.slider {
+
+
+  &__toggles {
+    @include list-reset;
+    font-size: 0;
+    text-align: center;
+  }
+
+  &__toggle {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    vertical-align: middle;
+    background-color: #bec2c7;
+    border-radius: 50%;
+    border: 3px solid white;
+
+    &:not(:last-child) {
+      margin-right: 13px;
+    }
+
+    &--active {
+      border-color: #283645
+    }
+  }
+}
