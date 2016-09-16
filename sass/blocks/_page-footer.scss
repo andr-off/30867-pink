@@ -1,0 +1,25 @@
+.page-footer {
+  padding: 40px 20px 0;
+  text-align: center;
+
+  &__logo {
+    margin-bottom: 37px;
+  }
+
+  &__copyright {
+    margin-right: 14px;
+    margin-top: 38px;
+    font-size: 0.875em;
+    line-height: 1.285714285714286;
+    color: #283645;
+
+    a {
+      font-size: 0;
+    }
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
