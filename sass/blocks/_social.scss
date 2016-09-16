@@ -4,28 +4,32 @@
 
   &__link {
     display: inline-block;
-    width: 45px;
-    height: 45px;
-    border: 3px solid #e9ebec;
-    border-radius: 50%;
-    background: white;
-    background-repeat: no-repeat;
-    background-position: center center;
 
     &:not(:last-child) {
       margin-right: 12px;
     }
 
-    &--twitter {
+    &--twitter a {
       background-image: url("../../img/icon-twitter.svg");
     }
 
-    &--facebook {
+    &--facebook a {
       background-image: url("../../img/icon-facebook.svg");
     }
 
-    &--youtube {
+    &--youtube a {
       background-image: url("../../img/icon-youtube.svg");
     }
+  }
+
+  &__link a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border: 3px solid #e9ebec;
+    border-radius: 50%;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 }
