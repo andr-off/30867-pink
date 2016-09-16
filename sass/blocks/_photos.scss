@@ -1,0 +1,65 @@
+.photos {
+  font-size: 0.875em;
+  line-height: 1.714285714285714;
+  color: #283645;
+  text-align: center;
+
+  &__item {
+    position: relative;
+    background-color: #f2f2f2;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &--panorama img {
+      padding: 0;
+    }
+
+    &--panorama::before {
+      content: "Панорама дня";
+      position: absolute;
+      top: 0;
+      right: 20px;
+      padding: 6px 20px;
+      font-size: 0.8571428571428571em;
+      line-height: 2;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: white;
+      background-color: #d22856;
+    }
+  }
+
+  &__image {
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  &__wraper {
+    padding: 20px 20px 25px;
+    text-align: left;
+  }
+
+  &__author {
+    font-weight: bold;
+  }
+
+  &__time {
+    font-size: 0.8571428571428571em;
+    line-height: 2;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &__like {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 32px;
+    font-size: 0.8571428571428571em;
+    line-height: 2;
+    text-transform: uppercase;
+    color: #d22856;
+  }
+}
