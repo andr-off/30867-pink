@@ -8,4 +8,14 @@
   text-decoration: none;
   color: white;
   background-color: transparent;
+
+  &--send {
+    border-color: #d22856;
+    color: #d22856;
+  }
+
+  &--disabled {
+    border-color: #dddfe0;
+    color: #dddfe0;
+  }
 }
