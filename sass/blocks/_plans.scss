@@ -47,7 +47,7 @@
       left: -1px;
       width: 75px;
       height: 72px;
-      background: url("../../img/bg-hit-tablet.svg") no-repeat 0 0;
+      background: url("./../img/bg-hit-tablet.svg") no-repeat 0 0;
     }
 
     &--hit:after {
@@ -93,7 +93,7 @@
       right: 17px;
       width: 30px;
       height: 21px;
-      background: url("../../img/icon-yes.svg") no-repeat 0 0;
+      background: url("./../img/icon-yes.svg") no-repeat 0 0;
     }
 
     &--not-available:after {
@@ -103,7 +103,7 @@
       right: 17px;
       width: 27px;
       height: 27px;
-      background: url("../../img/icon-no.svg") no-repeat 0 0;
+      background: url("./../img/icon-no.svg") no-repeat 0 0;
     }
   }
 
