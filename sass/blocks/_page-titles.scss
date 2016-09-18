@@ -1,14 +1,14 @@
 .page-titles {
-  text-align: center;
   padding: 45px 20px 30px;
+  text-align: center;
 
   &__title {
     margin: 0;
     padding: 0;
-    font-size: 1.5em;
+    font-size: px2rem(24);
     line-height: 1.2;
-    color: #283645;
     font-weight: 300;
+    color: #283645;
 
     &:first-child {
       margin-bottom: 35px;

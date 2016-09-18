@@ -7,8 +7,8 @@
   &__label-for-text-input {
     display: block;
     margin-left: 23px;
-    font-size: 0.875em;
-    line-height: 2.142857142857143;
+    font-size: px2rem(14);
+    @include line-height(14, 30);
     text-transform: uppercase;
     color: #d22856;
   }
@@ -16,12 +16,12 @@
   &__input {
     display: block;
     box-sizing: border-box;
-    width: 100%;
     padding: 15px 20px 14px;
+    width: 100%;
     border: 2px solid #e7e7e7;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.125em;
-    line-height: 1.666666666666667;
+    font-family: $primary-font;
+    font-size: px2rem(18);
+    @include line-height(18, 30);
 
     &:not(:last-child) {
       margin-bottom: 10px;
@@ -39,8 +39,8 @@
   &__radiobutton-description {
     display: block;
     padding-left: 70px;
-    font-size: 1.125em;
-    line-height: 2.166666666666667;
+    font-size: px2rem(18);
+    @include line-height(18, 30);
     color: #283645;
 
     &:not(:last-child) {
@@ -54,12 +54,12 @@
   }
 
   &__title {
+    margin-bottom: 37px;
     padding-left: 15px;
     padding-right: 15px;
-    margin-bottom: 37px;
+    font-size: px2rem(14);
+    @include line-height(14, 18);
     text-align: center;
-    font-size: 0.875em;
-    line-height: 1.285714285714286;
     text-transform: uppercase;
     color: #d22856;
   }
@@ -80,9 +80,9 @@
     width: 100%;
     min-height: 200px;
     border: 2px solid #e5e5e5;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.125em;
-    line-height: 1.666666666666667;
+    font-family: $primary-font;
+    font-size: px2rem(18);
+    @include line-height(18, 30);
     color: #283645;
   }
 
@@ -95,13 +95,13 @@
   &__btn {
     display: block;
     box-sizing: border-box;
-    width: 100%;
     margin-bottom: 38px;
     padding: 17px 0 16px;
+    width: 100%;
     border: none;
     border-radius: 2px;
-    font-size: 1.125em;
-    line-height: 1.666666666666667;
+    font-size: px2rem(18);
+    @include line-height(18, 30);
     color: white;
     font-weight: bold;
     text-transform: uppercase;
@@ -109,8 +109,8 @@
   }
 
   &__footnote {
-    font-size: 0.875em;
-    line-height: 2.142857142857143;
+    font-size: px2rem(14);
+    @include line-height(14, 30);
     text-transform: uppercase;
     color: #283645;
   }

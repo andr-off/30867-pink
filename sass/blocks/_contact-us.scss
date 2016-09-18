@@ -4,14 +4,14 @@
 
   &__title {
     margin-bottom: 35px;
-    font-size: 1.5em;
-    line-height: 1.2;
+    font-size: px2rem(24);
+    @include line-height(24, 30);
     font-weight: 300;
   }
 
   &__call-to-action {
     margin-bottom: 5px;
-    font-size: 1.125em;
+    font-size: px2rem(18);
     line-height: 1.2;
     font-weight: bold;
   }
@@ -20,7 +20,7 @@
   &__email,
   &__address {
     margin-bottom: 20px;
-    font-size: 1.5em;
+    font-size: px2rem(24);
     line-height: 1.2;
     font-weight: 300;
     color: #d22856;
@@ -48,8 +48,7 @@
       top: 0;
       left: 0;
       display: block;
-      width: 50%;
-      height: 32px;
+      @include size(50%, 32px);
       background: linear-gradient(to left bottom, #ffffff 0%, #ffffff 50%, transparent 51%, transparent 100%);
     }
 
@@ -59,8 +58,7 @@
       top: 0;
       right: 0;
       display: block;
-      width: 50%;
-      height: 32px;
+      @include size(50%, 32px);
       background: linear-gradient(to right bottom, #ffffff 0%, #ffffff 50%, transparent 51%, transparent 100%);
     }
   }

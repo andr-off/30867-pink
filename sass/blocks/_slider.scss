@@ -1,6 +1,5 @@
 .slider {
 
-
   &__toggles {
     @include list-reset;
     font-size: 0;
@@ -9,19 +8,18 @@
 
   &__toggle {
     display: inline-block;
-    width: 6px;
-    height: 6px;
+    @include size(6px);
+    border: 3px solid white;
+    border-radius: 50%;
     vertical-align: middle;
     background-color: #bec2c7;
-    border-radius: 50%;
-    border: 3px solid white;
 
     &:not(:last-child) {
       margin-right: 13px;
     }
 
     &--active {
-      border-color: #283645 !important;
+      border-color: #283645 !important; //По-другому не получается повысить специфичность =(
     }
   }
 }

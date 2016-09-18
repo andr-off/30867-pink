@@ -24,8 +24,7 @@
 
   &__link a {
     display: inline-block;
-    width: 45px;
-    height: 45px;
+    @include size(45px);
     border: 3px solid #e9ebec;
     border-radius: 50%;
     background-color: white;

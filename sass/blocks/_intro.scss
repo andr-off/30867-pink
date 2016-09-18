@@ -1,11 +1,11 @@
 .intro {
-  background-color: #1d2631;
   text-align: center;
+  background-color: #1d2631;
 
   &__image {
     position: relative;
-    height: 171px;
     padding: 35px 20px 0;
+    height: 171px;
     background: url("./../img/bg-back-mobile@1x.jpg") no-repeat center top;
 
     &--index-page {
@@ -17,8 +17,7 @@
       position: absolute;
       left: calc(50% - 153px);
       bottom: 0;
-      width: 258px;
-      height: 286px;
+      @include size(258px, 286px);
       background: url("./../img/iphone-hand-mobile@1x.png") no-repeat 0 0;
     }
   }
@@ -47,17 +46,17 @@
   }
 
   &__description {
-    font-size: 0.875em;
+    font-size: px2rem(14);
+    @include line-height(14, 24);
     font-weight: 300;
     color: white;
-    line-height: 1.714285714285714;
   }
 
   &__title {
     margin: 0;
-    font-size: 1.5em;
+    font-size: px2rem(24);
     line-height: 1.2;
-    color: white;
     font-weight: 300;
+    color: white;
   }
 }

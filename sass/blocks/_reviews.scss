@@ -9,15 +9,15 @@
   &__author-name {
     display: block;
     margin-bottom: 28px;
-    font-size: 1.125em;
-    line-height: 1.666666666666667;
+    font-size: px2rem(18);
+    @include line-height(18, 30);
     font-weight: bold;
     font-style: normal;
   }
 
   &__quote {
-    font-size: 0.875em;
-    line-height: 2.142857142857143;
+    font-size: px2rem(14);
+    @include line-height(14, 30);
     color: #283645;
   }
 

@@ -13,12 +13,12 @@
     @include list-reset;
   }
 
-  & a {
+  a {
     display: block;
     padding: 23px 0;
     font-size: 1.125em;
-    color: white; // Добавить цвет для всех состояний
     text-decoration: none;
+    color: white; // Добавить цвет для всех состояний
     background-color: #283645;
     box-shadow:
       inset 0px -1px 0px 0px black,

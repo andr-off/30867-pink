@@ -8,8 +8,8 @@
 
   &__copyright {
     margin-top: 38px;
-    font-size: 0.875em;
-    line-height: 1.285714285714286;
+    font-size: px2rem(14);
+    @include line-height(14, 18);
     color: #283645;
 
     a {
