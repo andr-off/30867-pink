@@ -18,7 +18,7 @@
     }
 
     &--panorama::before {
-      content: "Панорама дня";
+      content: attr(data-value);
       position: absolute;
       top: 0;
       right: 20px;

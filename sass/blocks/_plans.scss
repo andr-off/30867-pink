@@ -49,7 +49,7 @@
     }
 
     &--hit:after {
-      content: "Хит";
+      content: attr(data-value);
       position: absolute;
       top: 13px;
       left: 4px;
