@@ -37,10 +37,11 @@
 
   &__checkbox-description,
   &__radiobutton-description {
+    position: relative;
     display: block;
     padding-left: 70px;
     font-size: px2rem(18);
-    @include line-height(18, 30);
+    @include line-height(18, 39);
     color: #283645;
 
     &:not(:last-child) {
@@ -48,10 +49,86 @@
     }
   }
 
-  & input[type="checkbox"],
-  & input[type="radio"] {
+  &__checkbox-description::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size(35px);
+    border: 2px solid #e5e5e5;
+    background-color: white;
+  }
+
+  &__checkbox-description::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 7px;
+    display: none;
+    @include size(22px, 11px);
+    border: 3px solid #d22856;
+    border-top: none;
+    border-right: none;
+    background-color: transparent;
+    transform: rotateZ(-45deg);
+  }
+
+  &__radiobutton-description::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size(35px);
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  &__radiobutton-description::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: none;
+    @include size(15px);
+    border-radius: 50%;
+    background-color: #d22856;
+  }
+
+  &__checkbox,
+  &__radiobutton {
     display: none;
   }
+
+#checkbox-1:checked ~ label[for="checkbox-1"]::after {
+  display: block;
+}
+#checkbox-2:checked ~ label[for="checkbox-2"]::after {
+  display: block;
+}
+#checkbox-3:checked ~ label[for="checkbox-3"]::after {
+  display: block;
+}
+#checkbox-4:checked ~ label[for="checkbox-4"]::after {
+  display: block;
+}
+#checkbox-5:checked ~ label[for="checkbox-5"]::after {
+  display: block;
+}
+#checkbox-6:checked ~ label[for="checkbox-6"]::after {
+  display: block;
+}
+
+
+#radiobutton-1:checked ~ label[for="radiobutton-1"]::after {
+  display: block;
+}
+#radiobutton-2:checked ~ label[for="radiobutton-2"]::after {
+  display: block;
+}
+#radiobutton-3:checked ~ label[for="radiobutton-3"]::after {
+  display: block;
+}
 
   &__title {
     margin-bottom: 37px;

@@ -7,19 +7,29 @@
   }
 
   &__toggle {
+    position: relative;
     display: inline-block;
-    @include size(6px);
-    border: 3px solid white;
-    border-radius: 50%;
+    @include size(22px);
     vertical-align: middle;
-    background-color: #bec2c7;
 
-    &:not(:last-child) {
-      margin-right: 13px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      @include size(6px);
+      border-radius: 50%;
+      background-color: #bec2c7;
     }
 
-    &--active {
-      border-color: #283645 !important; //По-другому не получается повысить специфичность =(
+    &:not(:last-child) {
+      margin-right: 1px;
+    }
+
+    &--active::after {
+      top: 5px;
+      left: 5px;
+      border: 3px solid #283645;
     }
   }
 }

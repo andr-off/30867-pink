@@ -57,10 +57,11 @@
   &__like {
     position: relative;
     margin-top: 10px;
-    margin-left: 32px;
+    padding-left: 32px;
     font-size: px2rem(12);
     @include line-height(12, 24);
     text-transform: uppercase;
     color: #d22856;
+    background: url("./../img/icon-heart.svg") no-repeat 0 50%;
   }
 }

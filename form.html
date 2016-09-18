@@ -16,7 +16,7 @@
     </div>
   </header>
   <nav class="main-nav">
-    <button class="main-nav__toggle" type="button">Открыть меню</button>
+    <button class="main-nav__toggle main-nav__toggle--close" type="button">Открыть закрыть меню</button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__items">
         <li class="main-nav__item"><a href="/">Главная</a></li>
@@ -45,30 +45,19 @@
     </fieldset>
     <fieldset class="form__achievements">
       <div class="form__title">Ваши безбашенные достижения в путешествии</div>
-      <label class="form__checkbox-description">
-        <input class="form__checkbox" type="checkbox" name="selfie" checked>
-        Сделал селфи с акулой
-      </label>
-      <label class="form__checkbox-description">
-        <input class="form__checkbox" type="checkbox" name="burned" checked>
-        Обгорел на пляже
-      </label>
-      <label class="form__checkbox-description">
-        <input class="form__checkbox" type="checkbox" name="saw-chuck-norris">
-        Видел Чака Норриса
-      </label>
-      <label class="form__checkbox-description">
-        <input class="form__checkbox" type="checkbox" name="bought-souvenirs">
-        Накупил сувениров
-      </label>
-      <label class="form__checkbox-description">
-        <input class="form__checkbox" type="checkbox" name="pinned-tower" checked>
-        Удержал башню
-      </label>
-      <label class="form__checkbox-description">
-        <input class="form__checkbox" type="checkbox" name="ruined-hotel">
-        Разгромил отель
-      </label>
+      <input class="form__checkbox" id="checkbox-1" type="checkbox" name="selfie" checked>
+      <input class="form__checkbox" id="checkbox-2" type="checkbox" name="burned" checked>
+      <input class="form__checkbox" id="checkbox-3" type="checkbox" name="saw-chuck-norris">
+      <input class="form__checkbox" id="checkbox-4" type="checkbox" name="bought-souvenirs">
+      <input class="form__checkbox" id="checkbox-5" type="checkbox" name="pinned-tower" checked>
+      <input class="form__checkbox" id="checkbox-6" type="checkbox" name="ruined-hotel">
+
+      <label class="form__checkbox-description" for="checkbox-1">Сделал селфи с акулой</label>
+      <label class="form__checkbox-description" for="checkbox-2">Обгорел на пляже</label>
+      <label class="form__checkbox-description" for="checkbox-3">Видел Чака Норриса</label>
+      <label class="form__checkbox-description" for="checkbox-4">Накупил сувениров</label>
+      <label class="form__checkbox-description" for="checkbox-5">Удержал башню</label>
+      <label class="form__checkbox-description" for="checkbox-6">Разгромил отель</label>
     </fieldset>
     <fieldset class="form__contact_details">
       <label class="form__label-for-text-input" for="name-field">Номерок телефончика:</label>
@@ -78,18 +67,12 @@
     </fieldset>
     <fieldset class="form__what-app">
       <div class="form__title">С каким приложением путешествовали?</div>
-      <label class="form__radiobutton-description">
-        <input class="form__radiobutton" type="radio" name="app" value="iOS" checked>
-        Pink для iOS
-      </label>
-      <label class="form__radiobutton-description">
-        <input class="form__radiobutton" type="radio" name="app" value="android">
-        Pink на Android
-      </label>
-      <label class="form__checkbox-description">
-        <input class="form__radiobutton" type="radio" name="app" value="windows">
-        Windows Phone
-      </label>
+      <input class="form__radiobutton" id="radiobutton-1" type="radio" name="app" value="iOS" checked>
+      <input class="form__radiobutton" id="radiobutton-2" type="radio" name="app" value="android">
+      <input class="form__radiobutton" id="radiobutton-3" type="radio" name="app" value="windows">
+      <label class="form__radiobutton-description" for="radiobutton-1">Pink для iOS</label>
+      <label class="form__radiobutton-description" for="radiobutton-2">Pink на Android</label>
+      <label class="form__radiobutton-description" for="radiobutton-3">Windows Phone</label>
     </fieldset>
     <fieldset class="form__your-emotions">
       <div class="form__title">Опишите свои эмоции</div>
