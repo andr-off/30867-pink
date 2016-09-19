@@ -100,36 +100,6 @@
     display: none;
   }
 
-#checkbox-1:checked ~ label[for="checkbox-1"]::after {
-  display: block;
-}
-#checkbox-2:checked ~ label[for="checkbox-2"]::after {
-  display: block;
-}
-#checkbox-3:checked ~ label[for="checkbox-3"]::after {
-  display: block;
-}
-#checkbox-4:checked ~ label[for="checkbox-4"]::after {
-  display: block;
-}
-#checkbox-5:checked ~ label[for="checkbox-5"]::after {
-  display: block;
-}
-#checkbox-6:checked ~ label[for="checkbox-6"]::after {
-  display: block;
-}
-
-
-#radiobutton-1:checked ~ label[for="radiobutton-1"]::after {
-  display: block;
-}
-#radiobutton-2:checked ~ label[for="radiobutton-2"]::after {
-  display: block;
-}
-#radiobutton-3:checked ~ label[for="radiobutton-3"]::after {
-  display: block;
-}
-
   &__title {
     margin-bottom: 37px;
     padding-left: 15px;
@@ -195,4 +165,33 @@
   &__asterisk {
     color: #d22856;
   }
+}
+
+#checkbox-1:checked ~ label[for="checkbox-1"]::after {
+  display: block;
+}
+#checkbox-2:checked ~ label[for="checkbox-2"]::after {
+  display: block;
+}
+#checkbox-3:checked ~ label[for="checkbox-3"]::after {
+  display: block;
+}
+#checkbox-4:checked ~ label[for="checkbox-4"]::after {
+  display: block;
+}
+#checkbox-5:checked ~ label[for="checkbox-5"]::after {
+  display: block;
+}
+#checkbox-6:checked ~ label[for="checkbox-6"]::after {
+  display: block;
+}
+
+#radiobutton-1:checked ~ label[for="radiobutton-1"]::after {
+  display: block;
+}
+#radiobutton-2:checked ~ label[for="radiobutton-2"]::after {
+  display: block;
+}
+#radiobutton-3:checked ~ label[for="radiobutton-3"]::after {
+  display: block;
 }
