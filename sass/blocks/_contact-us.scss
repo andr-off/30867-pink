@@ -1,0 +1,65 @@
+.contact-us {
+  padding: 45px 20px 0;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 35px;
+    font-size: px2rem(24);
+    @include line-height(24, 30);
+    font-weight: 300;
+  }
+
+  &__call-to-action {
+    margin-bottom: 5px;
+    font-size: px2rem(18);
+    line-height: 1.2;
+    font-weight: bold;
+  }
+
+  &__phone,
+  &__email,
+  &__address {
+    margin-bottom: 20px;
+    font-size: px2rem(24);
+    line-height: 1.2;
+    font-weight: 300;
+    color: #d22856;
+  }
+
+  &__email a {
+    text-decoration: none;
+    color: #d22856;
+  }
+
+  &__address {
+    margin-bottom: 40px;
+  }
+
+  &__map {
+    position: relative;
+    margin-left: -20px;
+    margin-right: -20px;
+    height: 200px;
+    background: url("./../img/bg-map-mobile@1x.png") no-repeat center top;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      @include size(50%, 32px);
+      background: linear-gradient(to left bottom, #ffffff 0%, #ffffff 50%, transparent 51%, transparent 100%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      @include size(50%, 32px);
+      background: linear-gradient(to right bottom, #ffffff 0%, #ffffff 50%, transparent 51%, transparent 100%);
+    }
+  }
+}

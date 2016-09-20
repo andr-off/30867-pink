@@ -3,34 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__logo">
         <a>
-          <img src="#" alt="Pink">
+          <img src="img/logo-pink-white-mobile.svg" alt="Pink">
         </a>
       </div>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__items">
-            <li class="main-nav__item"><a href="#">Главная</a></li>
-            <li class="main-nav__item"><a href="#">Фотографии</a></li>
-            <li class="main-nav__item"><a href="#">Конкурс</a></li>
-            <li class="main-nav__item"><a href="#">Html Academy</a></li>
-          </ul>
-        </div>
-      </nav>
     </header>
+    <nav class="main-nav">
+      <button class="main-nav__toggle main-nav__toggle--close" type="button">Открыть закрыть меню</button>
+      <!-- Убрать обёртку если не понадобится -->
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__items">
+          <li class="main-nav__item"><a>Главная</a></li>
+          <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+          <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+          <li class="main-nav__item"><a href="https://htmlacademy.ru/">Html Academy</a></li>
+        </ul>
+      </div>
+    </nav>
     <section class="intro">
-      <div class="intro__image"></div>
+      <div class="intro__image intro__image--index-page"></div>
       <div class="intro__wrap">
-        <a href="#" class="btn btn--download">Скачать приложение</a>
+        <a href="#" class="btn intro__btn">Скачать приложение</a>
         <ul class="intro__icons">
-          <li><img class="intro__icon intro__icon--apple" src="#" alt="Логотип Apple"></li>
-          <li><img class="intro__icon intro__icon--android" src="#" alt="Логотип Android"></li>
-          <li><img class="intro__icon intro__icon--windows" src="#" alt="Логотип Windows"></li>
+          <li class="intro__icon intro__icon--apple"><a href="#"><img src="img/logo-apple.svg" alt="Логотип Apple" width="47" height="57"></a></li><!--
+       --><li class="intro__icon intro__icon--android"><a href="#"><img src="img/logo-android.svg" alt="Логотип Android" width="43" height="48"></a></li><!--
+       --><li class="intro__icon intro__icon--windows"><a href="#"><img src="img/logo-microsoft.svg" alt="Логотип Windows" width="44" height="42"></a></li>
         </ul>
         <div class="intro__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</div>
       </div>
@@ -53,7 +57,6 @@
           <h2 class="advantages__title">Заводит новых друзей</h2>
           <div class="advantages__description">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</div>
         </li>
-        <!-- Изображение телефона вставить background'ом -->
       </ul>
     </section>
     <section class="reviews">
@@ -72,15 +75,25 @@
         </blockquote> -->
       </div>
       <ul class="reviews__toggles slider__toggles">
-        <li class="slider__toggle"></li>
+        <li class="slider__toggle slider__toggle--active"></li>
         <li class="slider__toggle"></li>
         <li class="slider__toggle"></li>
       </ul>
     </section>
-    <section class="plans slider">
-      <ul class="plans__items">
-        <li class="plans__item">
+    <section class="plans">
+      <ul class="plans__items slider">
+        <!-- Тут три слайда стоят рядом друг с другом -->
+        <!-- <li class="plans__item">
           <header class="plans__header">
+            <div class="plans__name">Бюджетный</div>
+            <div class="plans__price">3,99 USD</div>
+          </header>
+          <div class="plans__feature plans__feature--available">Розовый фильтр</div>
+          <div class="plans__feature plans__feature--not-available">Смайлики</div>
+          <div class="plans__feature plans__feature--not-available">Комментарии</div>
+        </li> -->
+        <li class="plans__item">
+          <header class="plans__header plans__header--hit" data-value="Хит">
             <div class="plans__name">Стандарт</div>
             <div class="plans__price">3,99 USD</div>
             <!-- label добавить через псевдо-элемент -->
@@ -91,26 +104,17 @@
         </li>
         <!-- <li class="plans__item">
           <header class="plans__header">
-            <div class="plans__name"></div>
-            <div class="plans__price"></div>
+            <div class="plans__name">Профессиональный</div>
+            <div class="plans__price">3,99 USD</div>
           </header>
-          <div class="plans__feature"></div>
-          <div class="plans__feature"></div>
-          <div class="plans__feature"></div>
-        </li>
-        <li class="plans__item">
-          <header class="plans__header">
-            <div class="plans__name"></div>
-            <div class="plans__price"></div>
-          </header>
-          <div class="plans__feature"></div>
-          <div class="plans__feature"></div>
-          <div class="plans__feature"></div>
+          <div class="plans__feature plans__feature--available">Розовый фильтр</div>
+          <div class="plans__feature plans__feature--available">Смайлики</div>
+          <div class="plans__feature plans__feature--available">Комментарии</div>
         </li> -->
       </ul>
       <ul class="plans__toggles slider__toggles">
         <li class="slider__toggle"></li>
-        <li class="slider__toggle"></li>
+        <li class="slider__toggle slider__toggle--active"></li>
         <li class="slider__toggle"></li>
       </ul>
     </section>

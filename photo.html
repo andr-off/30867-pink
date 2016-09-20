@@ -3,26 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Пинк - фотографии пользователей</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
   <header class="page-header">
     <div class="page-header__logo">
       <a href="/">
-        <img src="#" alt="Логотип">
+        <img src="img/logo-pink-white-mobile.svg" alt="Pink">
       </a>
     </div>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__items">
-          <li class="main-nav__item"><a href="/">Главная</a></li>
-          <li class="main-nav__item"><a href="#">Фотографии</a></li>
-          <li class="main-nav__item"><a href="#">Конкурс</a></li>
-          <li class="main-nav__item"><a href="#">Html Academy</a></li>
-        </ul>
-      </div>
-    </nav>
   </header>
+  <nav class="main-nav">
+    <button class="main-nav__toggle main-nav__toggle--close" type="button">Открыть закрыть меню</button>
+    <div class="main-nav__wrapper">
+      <ul class="main-nav__items">
+        <li class="main-nav__item"><a href="/">Главная</a></li>
+        <li class="main-nav__item"><a>Фотографии</a></li>
+        <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+        <li class="main-nav__item"><a href="https://htmlacademy.ru/">Html Academy</a></li>
+      </ul>
+    </div>
+  </nav>
   <section class="intro">
     <div class="intro__image">
       <h2 class="intro__title">Фотографии пользователей</h2>
@@ -32,88 +35,102 @@
     <div class="page-section__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</div>
   </section>
   <section class="photos">
-    <div class="photos__item">
-      <img class="photos__image" src="#" alt="Панорама природы">
-      <div class="photos__author">
-        Анна
-        <time class="photos__time">(5 минут назад)</time>
-      </div>
-      <div class="photos__description">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</div>
-      <div class="photos__like">
-        Нравится:
-        <span class="photos__like-counter">215</span>
-      </div>
-    </div>
-    <div class="photos__item">
-      <img class="photos__image" src="#" alt="Фотография фотоаппарата, снимающего машину">
-      <div class="photos__author">
-        Левон
-        <time class="photos__time">(5 часов назад)</time>
-      </div>
-      <div class="photos__description">Вчера он на луну летал, сегодня в руки к нам попал.</div>
-      <div class="photos__like">
-        Нравится:
-        <span class="photos__like-counter">356</span>
+    <div class="photos__item photos__item--panorama" data-value="Панорама дня">
+      <a href="#"><img class="photos__image" src="img/panorama-mobile@1x.jpg" alt="Панорама природы"></a>
+      <div class="photos__wraper">
+        <div class="photos__author">
+          Анна
+          <time class="photos__time">(5 минут назад)</time>
+        </div>
+        <div class="photos__description">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</div>
+        <div class="photos__like">
+          Нравится:
+          <span class="photos__like-counter">215</span>
+        </div>
       </div>
     </div>
     <div class="photos__item">
-      <img class="photos__image" src="#" alt="Фотография барабанов">
-      <div class="photos__author">
-        Антон
-        <time class="photos__time">(12 часов назад)</time>
-      </div>div
-      <div class="photos__description">Соседи будут рады!</div>
-      <div class="photos__like">
-        Нравится:
-        <span class="photos__like-counter">666</span>
+      <a href="#"><img class="photos__image" src="img/photo-1-mobile@1x.jpg" alt="Фотография фотоаппарата, снимающего машину"></a>
+      <div class="photos__wraper">
+        <div class="photos__author">
+          Левон
+          <time class="photos__time">(5 часов назад)</time>
+        </div>
+        <div class="photos__description">Вчера он на луну летал, сегодня в руки к нам попал.</div>
+        <div class="photos__like">
+          Нравится:
+          <span class="photos__like-counter">356</span>
+        </div>
       </div>
     </div>
     <div class="photos__item">
-      <img class="photos__image" src="#" alt="Фотография стеклянного потолка">
-      <div class="photos__author">
-        Борис
-        <time class="photos__time">(20 часов назад)</time>
-      </div>
-      <div class="photos__description">Здесь могла быть ваша цитата о высоком и вечном.</div>
-      <div class="photos__like">
-        Нравится:
-        <span class="photos__like-counter">215</span>
-      </div>
-    </div>
-    <div class="photos__item">
-      <img class="photos__image" src="#" alt="Фотография Кубанской бахчи">
-      <div class="photos__author">
-        Сергей
-        <time class="photos__time">(25 часов назад)</time>
-      </div>
-      <div class="photos__description">Самая кубанская в мире!</div>
-      <div class="photos__like">
-        Нравится:
-        <span class="photos__like-counter">4</span>
+      <a href="#"><img class="photos__image" src="img/photo-2-mobile@1x.jpg" alt="Фотография барабанов"></a>
+      <div class="photos__wraper">
+        <div class="photos__author">
+          Антон
+          <time class="photos__time">(12 часов назад)</time>
+        </div>
+        <div class="photos__description">Соседи будут рады!</div>
+        <div class="photos__like">
+          Нравится:
+          <span class="photos__like-counter">666</span>
+        </div>
       </div>
     </div>
     <div class="photos__item">
-      <img class="photos__image" src="#" alt="Фотография склона горы">
-      <div class="photos__author">
-        Максим
-        <time class="photos__time">(40 часов назад)</time>
-      </div>
-      <div class="photos__description">Где снег-то?</div>
-      <div class="photos__like">
-        Нравится:
-        <span class="photos__like-counter">150</span>
+      <a href="#"><img class="photos__image" src="img/photo-3-mobile@1x.jpg" alt="Фотография стеклянного потолка"></a>
+      <div class="photos__wraper">
+        <div class="photos__author">
+          Борис
+          <time class="photos__time">(20 часов назад)</time>
+        </div>
+        <div class="photos__description">Здесь могла быть ваша цитата о высоком и вечном.</div>
+        <div class="photos__like">
+          Нравится:
+          <span class="photos__like-counter">215</span>
+        </div>
       </div>
     </div>
     <div class="photos__item">
-      <img class="photos__image" src="#" alt="Фотография крыла самолёта">
-      <div class="photos__author">
-        Надежда
-        <time class="photos__time">(45 часов назад)</time>
+      <a href="#"><img class="photos__image" src="img/photo-4-mobile@1x.jpg" alt="Фотография Кубанской бахчи"></a>
+      <div class="photos__wraper">
+        <div class="photos__author">
+          Сергей
+          <time class="photos__time">(25 часов назад)</time>
+        </div>
+        <div class="photos__description">Самая кубанская в мире!</div>
+        <div class="photos__like">
+          Нравится:
+          <span class="photos__like-counter">4</span>
+        </div>
       </div>
-      <div class="photos__description">Всем GM и взаимные лайки!</div>
-      <div class="photos__like">
-        Нравится:
-        <span class="photos__like-counter">2560</span>
+    </div>
+    <div class="photos__item">
+      <a href="#"><img class="photos__image" src="img/photo-5-mobile@1x.jpg" alt="Фотография склона горы"></a>
+      <div class="photos__wraper">
+        <div class="photos__author">
+          Максим
+          <time class="photos__time">(40 часов назад)</time>
+        </div>
+        <div class="photos__description">Где снег-то?</div>
+        <div class="photos__like">
+          Нравится:
+          <span class="photos__like-counter">150</span>
+        </div>
+      </div>
+    </div>
+    <div class="photos__item">
+      <a href="#"><img class="photos__image" src="img/photo-6-mobile@1x.jpg" alt="Фотография крыла самолёта"></a>
+      <div class="photos__wraper">
+        <div class="photos__author">
+          Надежда
+          <time class="photos__time">(45 часов назад)</time>
+        </div>
+        <div class="photos__description">Всем GM и взаимные лайки!</div>
+        <div class="photos__like">
+          Нравится:
+          <span class="photos__like-counter">2560</span>
+        </div>
       </div>
     </div>
   </section>
@@ -121,22 +138,30 @@
     <div class="page-section__text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</div>
   </section>
   <section class="editor">
-    <div class="editor__photo"></div>
+    <div class="editor__photo">
+      <img src="img/photo-7-mobile@1x.jpg" alt="">
+    </div>
     <div class="editor__controls">
-      <a href="" class="btn btn--control btn--crop"></a>
-      <a href="" class="btn btn--control btn--fill"></a>
-      <a href="" class="btn btn--control btn--contast"></a>
+      <a href="" class="editor__control editor__control--crop editor__control--active"></a>
+      <!-- <div class="editor__scale">
+        <div class="editor__toggle" style="left: 80%;"></div>
+      </div> -->
+      <a href="" class="editor__control editor__control--fill"></a>
+      <!-- <div class="editor__scale">
+        <div class="editor__toggle" style="left: 80%;"></div>
+      </div> -->
+      <a href="" class="editor__control editor__control--contrast"></a>
       <div class="editor__scale">
-        <div class="editor__toggle"></div>
+        <div class="editor__toggle" style="left: 80%;"></div>
       </div>
     </div>
     <div class="editor__buttons">
-      <button class="btn btn--set" type="button">Запостить</button>
-      <button class="btn btn--canсel btn--disabled" type="button">Отмена</button>
+      <a class="btn btn--send editor__btn" href="#">Запостить</a>
+      <a class="btn btn--canсel btn--disabled" href="#">Отмена</a>
     </div>
   </section>
   <footer class="page-footer">
-    <div class="page-footer__logo"><a href="/"><img src="#" alt="Логотип"></a></div>
+    <div class="page-footer__logo"><a href="/"><img src="img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Логотип"></a></div>
     <ul class="social">
       <li class="social__link social__link--twitter"><a href="https://twitter.com/">Twitter</a></li>
       <li class="social__link social__link--facebook"><a href="https://www.facebook.com/">Facebook</a></li>
@@ -144,7 +169,10 @@
     </ul>
     <div class="page-footer__copyright">
       Разработано
-      <a href="https://htmlacademy.ru/">Html Academy</a>
+      <a href="https://htmlacademy.ru/">
+        Html Academy
+        <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="Html Academy" title="Html Academy">
+      </a>
     </div>
   </footer>
 </body>

@@ -1,0 +1,40 @@
+.main-nav {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+
+  &__toggle {
+    position: absolute;
+    top: -49px;
+    right: 20px;
+    border: none;
+    font-size: 0;
+    background-color: transparent;
+
+    &--close {
+      @include size(24px);
+      background: url("./../img/icon-menu-cross.svg");
+    }
+
+    &--open {
+      @include size(50px, 24px);
+      background: url("./../img/icon-menu-burger.svg");
+    }
+  }
+
+  &__items {
+    @include list-reset;
+  }
+
+  a {
+    display: block;
+    padding: 23px 0;
+    font-size: 1.125em;
+    text-decoration: none;
+    color: white; // Добавить цвет для всех состояний
+    background-color: #283645;
+    box-shadow:
+      inset 0px -1px 0px 0px black,
+      inset 0px 1px 0px 0px rgba(white, 0.15);
+  }
+}
