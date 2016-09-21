@@ -13,6 +13,14 @@
   line-height: $line-height / $font-size;
 }
 
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 @function px2rem($value) {
   @return ($value / $base-font-size) * 1rem;
 }

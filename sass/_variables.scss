@@ -1,2 +1,5 @@
 $primary-font: "Open Sans", "Arial", sans-serif;
 $base-font-size: 16;
+$tablet-widths: (min-width: 700px);
+$desktop-widths: (min-width: 1200px);
+$mobile-and-tablet: (max-width: 1199px);

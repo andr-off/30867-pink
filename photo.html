@@ -8,24 +8,25 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
-  <header class="page-header">
-    <div class="page-header__logo">
-      <a href="/">
-        <img src="img/logo-pink-white-mobile.svg" alt="Pink">
-      </a>
+  <header class="page-header  page-header--nojs">
+    <div class="page-header__wrap">
+      <div class="page-header__logo">
+        <a href="/">
+          <img src="img/logo-pink-white-mobile.svg" width="75" height="24" alt="Pink">
+        </a>
+      </div>
+      <nav class="main-nav  main-nav--closed  main-nav--nojs">
+        <button class="main-nav__toggle" type="button">Открыть закрыть меню</button>
+        <ul class="main-nav__items">
+          <li class="main-nav__item"><a href="/">Главная</a></li>
+          <li class="main-nav__item  main-nav__item--active"><a>Фотографии</a></li>
+          <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+          <li class="main-nav__item"><a href="https://htmlacademy.ru/">Html Academy</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
-  <nav class="main-nav">
-    <button class="main-nav__toggle main-nav__toggle--close" type="button">Открыть закрыть меню</button>
-    <div class="main-nav__wrapper">
-      <ul class="main-nav__items">
-        <li class="main-nav__item"><a href="/">Главная</a></li>
-        <li class="main-nav__item"><a>Фотографии</a></li>
-        <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
-        <li class="main-nav__item"><a href="https://htmlacademy.ru/">Html Academy</a></li>
-      </ul>
-    </div>
-  </nav>
+
   <section class="intro">
     <div class="intro__image">
       <h2 class="intro__title">Фотографии пользователей</h2>
