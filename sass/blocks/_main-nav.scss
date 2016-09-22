@@ -7,7 +7,7 @@
 .main-nav__toggle {
   position: absolute;
   top: -49px;
-  right: 20px / 320px * 100%;
+  right: $mobile-horizontal-margin;
   z-index: 20;
   margin: 0;
   padding: 0;
@@ -64,7 +64,7 @@
 @media #{$tablet-widths} {
   .main-nav__toggle {
     top: -66px;
-    right: 40px / 700px * 100%;
+    right: $tablet-horizontal-margin;
   }
 }
 

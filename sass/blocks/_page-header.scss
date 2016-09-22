@@ -10,7 +10,7 @@
 .page-header__logo {
   display: inline-block;
   margin-bottom: 24px;
-  margin-left: 20px / 320px * 100%;
+  margin-left: $mobile-horizontal-margin;
 }
 
 .page-header__logo img {
@@ -31,7 +31,7 @@
   }
 
   .page-header__logo {
-    margin-left: 40px / 700px * 100%;
+    margin-left: $tablet-horizontal-margin;
     margin-bottom: 42px;
   }
 }
