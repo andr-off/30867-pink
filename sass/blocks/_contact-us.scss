@@ -1,65 +1,109 @@
 .contact-us {
-  padding: 45px 20px 0;
+  padding: 45px $mobile-horizontal-margin 0;
   text-align: center;
+}
 
-  &__title {
-    margin-bottom: 35px;
-    font-size: px2rem(24);
-    @include line-height(24, 30);
-    font-weight: 300;
+.contact-us__title {
+  margin: 0;
+  margin-bottom: 35px;
+  font-size: px2rem(24);
+  @include line-height(24, 30);
+  font-weight: 300;
+}
+
+.contact-us__call-to-action {
+  margin-bottom: 5px;
+  font-size: px2rem(18);
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.contact-us__phone,
+.contact-us__email,
+.contact-us__address {
+  margin-bottom: 20px;
+  font-size: px2rem(24);
+  line-height: 1.2;
+  font-weight: 300;
+  color: #d22856;
+}
+
+.contact-us__email a {
+  text-decoration: none;
+  color: #d22856;
+
+  &:hover {
+    color: #283645;
+  }
+}
+
+.contact-us__address {
+  margin-bottom: 40px;
+}
+
+.contact-us__map {
+  position: relative;
+  height: 200px;
+  background-image:
+    url("./../img/icon-map-marker.svg"),
+    url("./../img/bg-triangle-white-footer.svg"),
+    url("./../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 50% 60%, 50% 0, 50% 0;
+}
+
+@media #{$tablet-widths} {
+  .contact-us {
+    padding: 53px $tablet-horizontal-margin 0;
   }
 
-  &__call-to-action {
-    margin-bottom: 5px;
-    font-size: px2rem(18);
+  .contact-us__title {
+    margin-bottom: 45px;
+    font-size: px2rem(40);
     line-height: 1.2;
-    font-weight: bold;
   }
 
-  &__phone,
-  &__email,
-  &__address {
-    margin-bottom: 20px;
-    font-size: px2rem(24);
-    line-height: 1.2;
-    font-weight: 300;
-    color: #d22856;
-  }
+  .contact-us__l-wrap {
+    display: inline-block;
+    margin-left: px2rem(-4);
+    width: 50%;
+    vertical-align: top;
 
-  &__email a {
-    text-decoration: none;
-    color: #d22856;
-  }
-
-  &__address {
-    margin-bottom: 40px;
-  }
-
-  &__map {
-    position: relative;
-    margin-left: -20px;
-    margin-right: -20px;
-    height: 200px;
-    background: url("./../img/bg-map-mobile@1x.png") no-repeat center top;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      @include size(50%, 32px);
-      background: linear-gradient(to left bottom, #ffffff 0%, #ffffff 50%, transparent 51%, transparent 100%);
+    &:not(:last-of-type) {
+      margin-bottom: 50px;
     }
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: block;
-      @include size(50%, 32px);
-      background: linear-gradient(to right bottom, #ffffff 0%, #ffffff 50%, transparent 51%, transparent 100%);
+  .contact-us__phone,
+  .contact-us__email,
+  .contact-us__address {
+    margin-bottom: 0;
+  }
+
+  .contact-us__map {
+    margin-top: 20px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .contact-us {
+    padding: 75px 0 0;
+  }
+
+  .contact-us__wrap {
+    margin: 0 auto;
+    max-width: 940px;
+  }
+
+  .contact-us__l-wrap {
+    width: 33%;
+
+    &:nth-of-type(2) {
+      float: right;
     }
+  }
+
+  .contact-us__title {
+    font-size: px2rem(50);
   }
 }
