@@ -1,27 +1,121 @@
 .reviews {
-  padding: 50px 20px 43px;
+  padding: 50px $mobile-horizontal-margin 43px;
   text-align: center;
+}
 
-  &__item {
-    margin: 0;
+.reviews__item {
+  margin: 0;
+}
+
+.reviews__author-wrap {
+  margin-bottom: 28px;
+}
+
+.reviews__author-name {
+  display: block;
+  font-size: px2rem(18);
+  @include line-height(18, 30);
+  font-weight: bold;
+  font-style: normal;
+}
+
+.reviews__about-author {
+  display: none;
+}
+
+.reviews__quote {
+  font-size: px2rem(14);
+  @include line-height(14, 30);
+  color: #283645;
+}
+
+.reviews__arrow {
+  display: none;
+}
+
+.reviews__toggles {
+  padding-top: 40px;
+}
+
+@media #{$tablet-widths} {
+  .reviews {
+    position: relative;
+    padding: 55px $tablet-horizontal-margin 160px;
   }
 
-  &__author-name {
+  .reviews__author-wrap {
+    position: absolute;
+    left: 50%;
+    margin-bottom: 0;
+    transform: translate(-50%);
+    bottom: 70px;
+  }
+
+  .reviews__author-name {
+    font-size: px2rem(20);
+    @include line-height(20, 30);
+  }
+
+  .reviews__about-author {
     display: block;
-    margin-bottom: 28px;
-    font-size: px2rem(18);
-    @include line-height(18, 30);
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  &__quote {
     font-size: px2rem(14);
     @include line-height(14, 30);
     color: #283645;
   }
 
-  &__toggles {
-    padding-top: 40px;
+  .reviews__quote {
+    margin: 0 auto;
+    max-width: 735px;
+    font-size: px2rem(18);
+    @include line-height(18, 30);
+  }
+
+  .reviews__toggles {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+@media #{$desktop-widths} {
+  .reviews {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 185px $desktop-horizontal-margin 140px;
+    width: 100%;
+    max-width: 940px;
+  }
+
+  .reviews__author-wrap {
+    bottom: 40px;
+  }
+
+  .reviews__author-name {
+    font-size: px2rem(24);
+    @include line-height(24, 30);
+  }
+
+  .reviews__about-author {
+    font-size: px2rem(18);
+    @include line-height(18, 30);
+  }
+
+  .reviews__arrow {
+    position: absolute;
+    display: block;
+    bottom: 160px;
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+  }
+
+  .reviews__toggles {
+    display: none;
   }
 }
