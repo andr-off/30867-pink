@@ -6,7 +6,7 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: -49px;
+  top: -45px;
   right: $mobile-horizontal-margin;
   z-index: 20;
   margin: 0;
@@ -70,26 +70,24 @@
 
 @media #{$desktop-widths} {
   .main-nav {
-    float: right;
-    padding-top: 34px;
-    text-align: right;
+    flex-grow: 1;
   }
 
-  .main-nav__item {
-    display: inline-block;
+  .main-nav__items {
+    display: flex;
+    justify-content: flex-end;
+  }
 
-    &:not(:last-child) {
-      margin-right: 82px;
-    }
+  .main-nav__item:not(:last-child) {
+    margin-right: 82px;
+  }
 
-    &:first-child {
-      box-shadow: none;
-    }
+  .main-nav__item:first-child {
+    box-shadow: none;
+  }
 
-    &--active a {
-      margin-bottom: 21px;
-      border-bottom: 2px solid white;
-    }
+  .main-nav__item--active a {
+    border-bottom: 2px solid white;
   }
 
   .main-nav__item a {

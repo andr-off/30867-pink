@@ -107,10 +107,8 @@
 }
 
 .form__title {
-  display: inline-block;
-  box-sizing: border-box;
+  margin: 0 auto;
   padding: 0 30px;
-  width: 100%;
   font-size: px2rem(14);
   @include line-height(14, 18);
   text-align: center;
@@ -201,17 +199,25 @@
   .form__your-emotions,
   .form__contact_details,
   .form__achievements {
+    position: relative;
     padding: 0 (60px / 700px * 100%);
     margin-bottom: 65px;
     border: 2px solid #e5e5e5;
     background: none;
   }
 
+  .form__title-wrap {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    // text-align: center;
+  }
+
   .form .form__title {
-    display: block;
     margin: 0;
-    width: auto;
     padding: 0 37px;
+    width: auto;
     white-space: nowrap;
     background-color: white;
   }

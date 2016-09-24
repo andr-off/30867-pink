@@ -1,20 +1,16 @@
 .page-header {
   position: relative;
   z-index: 10;
-  margin-bottom: -70px;
   padding-top: 22px;
+  margin-bottom: -66px;
   font-size: 0;
   background-color: rgba(black, 0.3);
 }
 
 .page-header__logo {
   display: inline-block;
-  margin-bottom: 24px;
   margin-left: $mobile-horizontal-margin;
-}
-
-.page-header__logo img {
-  display: block;
+  margin-bottom: 20px;
 }
 
 @media #{$mobile-and-tablet} {
@@ -26,8 +22,8 @@
 
 @media #{$tablet-widths} {
   .page-header {
-    margin-bottom: -110px;
     padding-top: 44px;
+    margin-bottom: -110px;
   }
 
   .page-header__logo {
@@ -42,12 +38,15 @@
   }
 
   .page-header__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
     max-width: 940px;
+    min-height: 110px;
   }
 
   .page-header__logo {
-    margin-left: 0;
-    padding-top: 44px;
+    margin: 0;
   }
 }
