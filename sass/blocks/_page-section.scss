@@ -1,10 +1,47 @@
 .page-section {
-  padding: 50px 20px 45px;
+  padding: 50px $mobile-horizontal-margin 45px;
   text-align: center;
+}
 
-  &__text {
-    font-size: px2rem(14);
-    @include line-height(14, 30);
-    color: #283645;
+.page-section__text {
+  margin: 0 auto;
+  max-width: 400px;
+  font-size: px2rem(14);
+  @include line-height(14, 30);
+  color: #283645;
+
+  &--special {
+    padding: 0 15px;
+    max-width: 480px;
+  }
+}
+
+.page-section__addition {
+  display: none;
+}
+
+@media #{$tablet-widths} {
+  .page-section {
+    padding: 95px 0 70px;
+  }
+  .page-section__text {
+    margin: 0 auto;
+    max-width: 500px;
+    font-size: px2rem(18);
+    @include line-height(18, 30);
+  }
+
+  .page-section__addition {
+    display: inline;
+  }
+}
+
+@media #{$desktop-widths} {
+  .page-section__text {
+    max-width: 760px;
+
+    &--special {
+      max-width: 575px;
+    }
   }
 }
