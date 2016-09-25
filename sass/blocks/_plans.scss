@@ -4,10 +4,13 @@
 }
 
 .plans__items {
+  display: flex;
+  justify-content: center;
   @include list-reset;
 }
 
 .plans__item {
+  width: 320px;
   display: none;
 
   &:nth-child(3) {
@@ -118,11 +121,9 @@
     width: 100%;
     max-width: 800px;
     vertical-align: bottom;
-    @include clearfix;
   }
 
   .plans__item {
-    float: left;
     display: block;
     box-sizing: border-box;
     margin: 0;
@@ -134,9 +135,6 @@
     font-size: 0;
   }
 
-  .plans__item--first {
-    display: block;
-  }
   .plans__item--first .plans__header {
     margin-top: -2px;
     height: 65px;
@@ -162,6 +160,7 @@
 
   .plans__header--hit::before {
     left: 0;
+    background: url("./../img/bg-hit-tablet.svg") no-repeat 0 0;
   }
 
   .plans__feature {
