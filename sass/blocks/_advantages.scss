@@ -17,7 +17,15 @@
 }
 
 .advantages__items {
+  display: flex;
+  flex-direction: column;
   @include list-reset;
+}
+
+.advantages__item {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 370px;
 }
 
 .advantages__item:not(:last-child) {
@@ -34,7 +42,7 @@
 .advantages__description {
   font-size: px2rem(14);
   @include line-height(14, 24);
-  color: #283645;
+  color: $primary-color;
 }
 
 @media #{$tablet-widths} {
@@ -68,21 +76,18 @@
   }
 
   .advantages__items {
+    flex-direction: row;
+    justify-content: space-between;
     margin: 0 auto;
+    padding: 0 30px;
     width: 100%;
     max-width: 940px;
     text-align: center;
-    @include clearfix;
   }
 
-  .advantages__item:nth-child(n) {
-    float: left;
-    margin: 0 55px 0 0;
+  .advantages__items .advantages__item {
+    margin: 0;
     width: 240px;
-  }
-
-  .advantages__item:first-child {
-    margin-left: 55px;
   }
 
   .advantages__image {
