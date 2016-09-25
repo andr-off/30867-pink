@@ -16,7 +16,7 @@
 @media #{$mobile-and-tablet} {
   .page-header--open-nav,
   .page-header--nojs {
-    background-color: #283645;
+    background-color: $primary-color;
   }
 }
 

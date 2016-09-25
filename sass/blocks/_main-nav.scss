@@ -36,7 +36,7 @@
   font-size: px2rem(18);
   text-decoration: none;
   color: white;
-  background-color: #283645;
+  background-color: $primary-color;
   box-shadow:
     inset 0px -1px 0px 0px black,
     inset 0px 1px 0px 0px rgba(white, 0.15);
@@ -79,7 +79,7 @@
   }
 
   .main-nav__item:not(:last-child) {
-    margin-right: 82px;
+    margin-right: 80px;
   }
 
   .main-nav__item:first-child {
@@ -97,8 +97,8 @@
     box-shadow: none;
 
     &:hover {
-      border-color: #d22856;
-      color: #d22856;
+      border-color: $secondary-color;
+      color: $secondary-color;
     }
 
     &:active {
