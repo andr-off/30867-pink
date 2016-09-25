@@ -1,5 +1,5 @@
 .page-titles {
-  padding: 45px $mobile-horizontal-margin 30px;
+  padding: 42px $mobile-horizontal-margin 30px;
   text-align: center;
 }
 
@@ -13,13 +13,13 @@
   color: #283645;
 
   &:first-child {
-    margin-bottom: 33px;
+    margin-bottom: 30px;
   }
 }
 
 @media #{$tablet-widths} {
   .page-titles {
-    padding: 55px $tablet-horizontal-margin 43px;
+    padding: 49px $tablet-horizontal-margin 43px;
   }
 
   .page-titles__title {
@@ -35,7 +35,7 @@
 
 @media #{$desktop-widths} {
   .page-titles {
-    padding: 75px $tablet-horizontal-margin 73px;
+    padding: 68px $tablet-horizontal-margin 73px;
   }
 
   .page-titles__title {

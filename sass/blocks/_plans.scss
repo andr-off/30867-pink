@@ -1,5 +1,5 @@
 .plans {
-  padding: 90px $mobile-horizontal-margin 45px;
+  padding: 85px $mobile-horizontal-margin 45px;
   background: #f2f2f2 url("./../img/bg-triangle-white.svg") no-repeat 100% 0;
 }
 
@@ -36,7 +36,7 @@
 
 .plans__header {
   position: relative;
-  padding: 25px 0;
+  padding: 16px 0 20px;
   border-right: 2px solid #e5e5e5;
   color: white;
   text-align: center;
@@ -46,16 +46,16 @@
     content: "";
     position: absolute;
     top: 0;
-    left: -2px;
+    left: 0;
     @include size(75px, 72px);
-    background: url("./../img/bg-hit-tablet.svg") no-repeat 0 0;
+    background: url("./../img/bg-hit.svg") no-repeat 0 0;
   }
 
   &--hit:after {
     content: attr(data-value);
     position: absolute;
-    top: 13px;
-    left: 4px;
+    top: 21px;
+    left: 9px;
     font-size: px2rem(14);
     font-weight: bold;
     text-transform: uppercase;
@@ -65,7 +65,7 @@
 }
 
 .plans__name {
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   font-size: px2rem(18);
   @include line-height(18, 30);
   font-weight: bold;
@@ -80,7 +80,7 @@
 
 .plans__feature {
   position: relative;
-  padding: 15px 22px 15px 17px;
+  padding: 15px 22px 14px 23px;
   border-right: 2px solid #e5e5e5;
   border-bottom: 2px solid #e5e5e5;
   font-size: px2rem(14);
@@ -101,20 +101,20 @@
   &--not-available:after {
     content: "";
     position: absolute;
-    top: 17px;
-    right: 17px;
+    top: 15px;
+    right: 19px;
     @include size(27px);
     background: url("./../img/icon-no.svg") no-repeat 0 0;
   }
 }
 
 .plans__toggles {
-  padding-top: 40px;
+  padding-top: 35px;
 }
 
 @media #{$tablet-widths} {
   .plans {
-    padding: 90px $tablet-horizontal-margin 70px;
+    padding: 104px $tablet-horizontal-margin 68px;
   }
   .plans__items {
     margin: 0 auto;
@@ -137,7 +137,7 @@
 
   .plans__item--first .plans__header {
     margin-top: -2px;
-    height: 65px;
+    height: 58px;
     border: none;
     border-bottom: 2px solid #e5e5e5;
     background-color: transparent;
@@ -148,9 +148,14 @@
     border-right: none;
   }
 
+  .plans__header {
+    padding: 12px 0 9px;
+  }
+
   .plans__name {
+    margin: 0;
     font-size: px2rem(16);
-    @include line-height(16, 30);
+    @include line-height(16, 28);
   }
 
   .plans__price {
@@ -163,14 +168,20 @@
     background: url("./../img/bg-hit-tablet.svg") no-repeat 0 0;
   }
 
+  .plans__header--hit::after {
+    top: 13px;
+    left: 6px;
+  }
+
   .plans__feature {
-    padding: 15px;
+    padding: 7px 15px 8px;
     text-transform: none;
 
     &--available::after,
     &--not-available::after {
-      right: 50%;
-      transform: translate(50%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 
@@ -181,7 +192,7 @@
 
 @media #{$desktop-widths} {
   .plans {
-    padding: 150px 0 95px;
+    padding: 149px 0 95px;
   }
 
   .plans__items {
@@ -189,7 +200,36 @@
     max-width: 940px;
   }
 
+  .plans__header {
+    padding: 17px 0 21px;
+  }
+
+  .plans__item--first .plans__header {
+    height: 60px;
+  }
+
+  .plans__header--hit::before {
+    left: 0;
+    background: url("./../img/bg-hit.svg") no-repeat 0 0;
+  }
+
+  .plans__header--hit::after {
+    top: 21px;
+    left: 10px;
+  }
+
+  .plans__name {
+    font-size: px2rem(18);
+    @include line-height(18, 30);
+  }
+
+  .plans__price {
+    font-size: px2rem(24);
+    @include line-height(24, 30);
+  }
+
   .plans__feature {
+    padding: 14px 20px 15px;
     font-size: px2rem(18);
     @include line-height(18, 30);
   }
