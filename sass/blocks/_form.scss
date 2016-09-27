@@ -1,17 +1,22 @@
-.form__personal-data {
-  margin: 0;
-  padding: 0 $mobile-horizontal-margin 43px;
-  border: none;
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__wrap {
+  display: flex;
+  flex-direction: column;
 }
 
 .form__label-for-text-input {
   display: block;
   box-sizing: border-box;
   margin-left: 23px;
+  margin-bottom: 5px;
   font-size: px2rem(14);
   @include line-height(14, 30);
   text-transform: uppercase;
-  color: #d22856;
+  color: $secondary-color;
 }
 
 .form__input {
@@ -25,16 +30,8 @@
   @include line-height(18, 30);
 
   &:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
   }
-}
-
-.form__achievements,
-.form__what-app {
-  margin: 0;
-  padding: 35px $mobile-horizontal-margin 49px;
-  border: none;
-  background: #f2f2f2
 }
 
 .form__checkbox-description,
@@ -44,11 +41,11 @@
   padding-left: 70px;
   font-size: px2rem(18);
   @include line-height(18, 39);
-  color: #283645;
+  color: $primary-color;
+}
 
-  &:not(:last-child) {
-    margin-bottom: 43px;
-  }
+.form__checkbox-description:not(:last-child) {
+  margin-bottom: 43px;
 }
 
 .form__checkbox-description::before {
@@ -64,15 +61,19 @@
 .form__checkbox-description::after {
   content: "";
   position: absolute;
-  top: 9px;
+  top: 8px;
   left: 7px;
   display: none;
   @include size(22px, 11px);
-  border: 3px solid #d22856;
+  border: 3px solid $secondary-color;
   border-top: none;
   border-right: none;
   background-color: transparent;
   transform: rotateZ(-45deg);
+}
+
+.form__radiobutton-description:not(:last-child) {
+  margin-bottom: 36px;
 }
 
 .form__radiobutton-description::before {
@@ -94,7 +95,7 @@
   display: none;
   @include size(15px);
   border-radius: 50%;
-  background-color: #d22856;
+  background-color: $secondary-color;
 }
 
 .form__checkbox,
@@ -113,60 +114,25 @@
   @include line-height(14, 18);
   text-align: center;
   text-transform: uppercase;
-  color: #d22856;
-}
-
-.form__achievements .form__title {
-  margin-bottom: 37px;
-}
-
-.form__what-app .form__title {
-  margin-bottom: 30px;
-}
-
-.form__your-emotions .form__title {
-  margin-bottom: 20px;
-}
-
-.form__contact_details {
-  margin: 0;
-  padding: 35px $mobile-horizontal-margin 54px;
-  border: none;
-}
-
-.form__contact_details .form__title {
-  display: none;
-}
-
-.form__your-emotions {
-  margin: 0;
-  padding: 50px $mobile-horizontal-margin 45px;
-  border: none;
+  color: $secondary-color;
 }
 
 .form__textarea {
   box-sizing: border-box;
-  padding: 15px 10px;
+  padding: 14px 18px;
   width: 100%;
-  min-height: 200px;
+  height: 201px;
   border: 2px solid #e5e5e5;
   font-family: $primary-font;
   font-size: px2rem(18);
   @include line-height(18, 30);
-  color: #283645;
-}
-
-.form__buttons {
-  margin: 0;
-  padding: 0 $mobile-horizontal-margin 10px;
-  border: none;
-  text-align: center;
+  color: $primary-color;
 }
 
 .form__btn {
   display: block;
   box-sizing: border-box;
-  margin-bottom: 38px;
+  margin-bottom: 35px;
   padding: 17px 0 16px;
   width: 100%;
   border: none;
@@ -183,16 +149,123 @@
   font-size: px2rem(14);
   @include line-height(14, 30);
   text-transform: uppercase;
-  color: #283645;
+  color: $primary-color;
 }
 
 .form__asterisk {
-  color: #d22856;
+  color: $secondary-color;
 }
+
+.form__footnote-additional {
+  display: none;
+}
+
+.form__personal-data {
+  margin: 0;
+  padding: 0 $mobile-horizontal-margin 43px;
+  border: none;
+}
+
+.form__personal-data .form__input:nth-of-type(2) {
+  margin-bottom: 19px;
+}
+
+.form__achievements,
+.form__what-app {
+  margin: 0;
+  border: none;
+  background: #f2f2f2;
+  padding: 37px $mobile-horizontal-margin 49px;
+}
+
+.form__achievements .form__title {
+  margin-bottom: 40px;
+}
+
+.form__what-app {
+  padding-bottom: 42px;
+}
+
+.form__what-app .form__title {
+  margin-bottom: 36px;
+}
+
+.form__your-emotions {
+  margin: 0;
+  padding: 57px $mobile-horizontal-margin 45px;
+  border: none;
+}
+
+.form__your-emotions .form__title {
+  margin-bottom: 18px;
+}
+
+.form__contact_details {
+  margin: 0;
+  padding: 29px $mobile-horizontal-margin 54px;
+  border: none;
+}
+
+.form__contact_details .form__title {
+  display: none;
+}
+
+.form__buttons {
+  margin: 0;
+  padding: 0 $mobile-horizontal-margin 10px;
+  border: none;
+  text-align: center;
+}
+
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
 
 @media #{$tablet-widths} {
   .form {
     padding: 0 $tablet-horizontal-margin;
+  }
+
+  .form__wrap {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__title-wrap {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .form .form__title {
+    margin: 0;
+    padding: 0 30px;
+    width: auto;
+    white-space: nowrap;
+    background-color: white;
+  }
+
+  .form__checkbox-description,
+  .form__radiobutton-description {
+    padding-left: 59px;
+  }
+
+  .form__textarea {
+    height: 193px;
+  }
+
+  .form__btn {
+    display: inline-block;
+    margin: 0;
+    width: 300px / 620px * 100%;
+  }
+
+  .form__footnote {
+    float: right;
+    margin-top: 17px;
   }
 
   .form__what-app,
@@ -206,55 +279,43 @@
     background: none;
   }
 
-  .form__title-wrap {
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translate(-50%);
-    // text-align: center;
-  }
-
-  .form .form__title {
-    margin: 0;
-    padding: 0 37px;
-    width: auto;
-    white-space: nowrap;
-    background-color: white;
-  }
-
   .form__personal-data {
     padding: 0;
     padding-bottom: 65px;
   }
 
-  .form__personal-data .form__label-for-text-input,
-  .form__personal-data .form__input {
-    display: inline-block;
+  .form__personal-data .form__wrap {
+    flex-direction: row;
+    align-items: center;
+    align-content: space-between;
+    min-height: 294px;
   }
 
   .form__personal-data .form__label-for-text-input {
     margin: 0;
-    width: 15%;
-    vertical-align: middle;
+    margin-right: 20px;
   }
 
   .form__personal-data .form__input {
-    margin-left: px2rem(-5);
-    width: 85%;
+    flex-grow: 1;
+    width: 84%;
   }
 
   .form__personal-data .form__input:not(:last-child) {
-    margin-bottom: 53px;
+    margin: 0;
   }
 
-  .form__achievements {
-    padding-top: 52px;
-    padding-bottom: 48px;
+  .form__what-app {
+    padding: 52px 58px 54px;
   }
 
   .form__contact_details {
-    padding-top: 15px;
-    padding-bottom: 60px;
+    order: 1;
+    padding: 45px 58px 26px;
+  }
+
+  .form__contact_details .form__wrap {
+    min-height: 235px;
   }
 
   .form__contact_details .form__title {
@@ -262,41 +323,170 @@
   }
 
   .form__contact_details .form__label-for-text-input {
-    position: relative;
-    top: 100px;
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 19px;
   }
 
-  .form__contact_details .form__input {
-    padding-right: 62px;
+  .form__contact_details .form__label-for-text-input:first-of-type {
+    order: 1;
+    margin-bottom: auto;
+  }
+
+  .form__contact_details .form__label-for-text-input:last-of-type {
+    order: 3;
+  }
+
+  .form__contact_details .form__input:last-of-type {
+    order: 2;
   }
 
   .form__contact_details .form__input:not(:last-child) {
-    margin-bottom: 39px;
+    margin: 0;
   }
 
-  .form__what-app {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  .form__achievements {
+    order: 2;
+    padding: 52px 58px 48px;
   }
 
   .form__your-emotions {
-    padding-top: 35px;
-    padding: 50px;
+    order: 3;
+    margin-bottom: 67px;
+    padding: 45px 58px 49px;
   }
 
   .form__buttons {
+    order: 4;
     padding: 0 0 45px;
     text-align: left;
   }
+}
 
-  .form__btn {
-    display: inline-block;
-    margin: 0;
-    width: 300px / 620px * 100%;
+// Промежуточный брейкопоинт
+@media (min-width: 1075px) {
+  .form__personal-data .form__input {
+    width: 89%;
+  }
+}
+
+/******
+*****
+**** Стили для десктопной версии
+***
+**/
+
+@media #{$desktop-widths} {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 940px;
   }
 
-  .form__footnote {
-    float: right;
-    margin-top: 17px;
+  .form__textarea {
+    height: 128px;
+  }
+
+  .form__btn {
+    width: 300px;
+  }
+
+  .form__footnote-additional {
+    display: inline;
+  }
+
+  .form__personal-data {
+    margin-top: 13px;
+    margin-right: 70px;
+    width: 435px;
+  }
+
+  .form__personal-data .form__label-for-text-input {
+    margin-right: 18px;
+  }
+
+  .form__personal-data .form__input {
+    width: 340px;
+  }
+
+  .form__what-app {
+    box-sizing: border-box;
+    margin-top: 7px;
+    padding: 55px 74px 53px;
+    width: 435px;
+  }
+
+  .form__contact_details {
+    padding: 42px 58px 13px;
+    width: 100%;
+  }
+
+  .form__contact_details .form__wrap {
+    flex-direction: row;
+    align-content: space-between;
+    min-height: auto;
+  }
+
+  .form__contact_details .form__wrap .form__label-for-text-input {
+    margin: 10px auto 0 19px;
+    order: 3;
+  }
+
+  .form__contact_details .form__label-for-text-input:last-of-type {
+    padding-left: 40px;
+  }
+
+  .form__contact_details .form__input {
+    width: 375px;
+  }
+
+  .form__achievements {
+    padding: 52px 48px 55px 58px;
+    width: 100%;
+  }
+
+  .form__achievements .form__wrap {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+// Сделал так, чтобы соответствовало макету
+  .form__achievements .form__checkbox-description:nth-of-type(2) {
+    order: 4;
+    margin-bottom: 0;
+  }
+
+  .form__achievements .form__checkbox-description:nth-of-type(3) {
+    margin-left: 57px;
+    margin-bottom: 0;
+  }
+
+  .form__achievements .form__checkbox-description:nth-of-type(4) {
+    order: 5;
+    margin-left: 96px;
+    margin-bottom: 0;
+  }
+
+  .form__achievements .form__checkbox-description:nth-of-type(5) {
+    margin-left: 65px;
+    margin-bottom: 0;
+  }
+
+  .form__achievements .form__checkbox-description:nth-of-type(6) {
+    order: 6;
+    margin-left: 74px;
+  }
+
+  .form__your-emotions {
+    margin-bottom: 65px;
+    padding: 42px 58px 41px;
+    width: 100%;
+  }
+
+  .form__buttons {
+    padding: 0;
+    width: 100%;
   }
 }

@@ -1,6 +1,11 @@
 .page-section {
   padding: 50px $mobile-horizontal-margin 45px;
   text-align: center;
+
+  &--form-page {
+    padding-top: 45px;
+    padding-bottom: 34px;
+  }
 }
 
 .page-section__text {
@@ -8,7 +13,7 @@
   max-width: 400px;
   font-size: px2rem(14);
   @include line-height(14, 30);
-  color: #283645;
+  color: $primary-color;
 
   &--special {
     padding: 0 15px;
@@ -20,10 +25,22 @@
   display: none;
 }
 
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
+
 @media #{$tablet-widths} {
   .page-section {
     padding: 95px 0 70px;
+
+    &--form-page {
+      padding-top: 92px;
+      padding-bottom: 71px;
+    }
   }
+
   .page-section__text {
     margin: 0 auto;
     max-width: 500px;
@@ -35,6 +52,12 @@
     display: inline;
   }
 }
+
+/******
+*****
+**** Стили для десктопной версии
+***
+**/
 
 @media #{$desktop-widths} {
   .page-section__text {

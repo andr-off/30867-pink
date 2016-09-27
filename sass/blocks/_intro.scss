@@ -14,7 +14,7 @@
 }
 
 .intro--index-page .intro__inner {
-  padding: 462px $mobile-horizontal-margin 30px;
+  padding: 462px $mobile-horizontal-margin 28px;
 }
 
 .intro__heading {
@@ -65,7 +65,17 @@
   line-height: 1.2;
   font-weight: 300;
   color: white;
+
+  &--form-page {
+    padding-bottom: 55px;
+  }
 }
+
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
 
 @media #{$tablet-widths} {
   .intro--index-page::after {
@@ -76,7 +86,7 @@
   .intro--index-page .intro__inner {
     position: relative;
     z-index: 10;
-    padding: 203px $tablet-horizontal-margin 111px;
+    padding: 203px $tablet-horizontal-margin 109px;
     width: 300px;
   }
 
@@ -86,7 +96,7 @@
   }
 
   .intro__btn {
-    margin-top: 30px;
+    margin-top: 31px;
   }
 
   .intro__icons {
@@ -100,11 +110,22 @@
   }
 
   .intro__title {
-    padding: 180px $tablet-horizontal-margin 140px;
+    padding: 180px $tablet-horizontal-margin 80px;
     max-width: 740px;
     font-size: px2rem(50);
+
+    &--form-page {
+      margin: 0 auto;
+      max-width: 500px;
+    }
   }
 }
+
+/******
+*****
+**** Стили для десктопной версии
+***
+**/
 
 @media #{$desktop-widths} {
   .intro__wrap {
@@ -112,11 +133,15 @@
     max-width: 940px;
   }
   .intro--index-page .intro__inner {
-    padding: 217px 0 122px;
+    padding: 217px 0 120px;
   }
 
   .intro__title {
     padding: 173px 0 101px;
+
+    &--form-page {
+      max-width: 750px;
+    }
   }
 
   .intro__heading {
@@ -125,7 +150,7 @@
   }
 
   .intro__btn {
-    margin-top: 52px;
+    margin-top: 53px;
   }
 
   .intro__icons {

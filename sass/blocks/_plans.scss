@@ -19,11 +19,11 @@
 }
 
 .plans__item:nth-child(2) .plans__header {
-  border-left: 2px solid #283645;
+  border-left: 2px solid $primary-color;
 }
 
 .plans__item:last-child .plans__header {
-  border-right: 2px solid #283645;
+  border-right: 2px solid $primary-color;
 }
 
 .plans__item:nth-child(2) .plans__feature {
@@ -40,7 +40,7 @@
   border-right: 2px solid #e5e5e5;
   color: white;
   text-align: center;
-  background-color: #283645;
+  background-color: $primary-color;
 
   &--hit:before {
     content: "";
@@ -86,7 +86,7 @@
   font-size: px2rem(14);
   @include line-height(14, 30);
   text-transform: uppercase;
-  color: #283645;
+  color: $primary-color;
   background-color: white;
 
   &--available:after {
@@ -111,6 +111,12 @@
 .plans__toggles {
   padding-top: 35px;
 }
+
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
 
 @media #{$tablet-widths} {
   .plans {
@@ -189,6 +195,12 @@
     display: none;
   }
 }
+
+/******
+*****
+**** Стили для десктопной версии
+***
+**/
 
 @media #{$desktop-widths} {
   .plans {

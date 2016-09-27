@@ -5,8 +5,7 @@
 .page-footer__wrap {
   display: flex;
   flex-direction: column;
-  padding: 40px $mobile-horizontal-margin 0;
-  width: 100%;
+  padding: 44px $mobile-horizontal-margin 0;
   text-align: center;
 }
 
@@ -15,13 +14,13 @@
 }
 
 .page-footer__copyright {
-  margin-top: 38px;
+  margin-top: 46px;
   font-size: px2rem(14);
   @include line-height(14, 18);
   color: $primary-color;
 
   a {
-    margin-left: 14px;
+    margin-left: 11px;
     font-size: 0;
   }
 
@@ -32,9 +31,15 @@
   }
 }
 
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
+
 @media #{$tablet-widths} {
   .page-footer--index-page {
-    display:flex;
+    display: block;
   }
 
   .page-footer__wrap {
@@ -42,6 +47,11 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 35px $tablet-horizontal-margin 44px;
+
+    &--form-page {
+      padding-top: 40px;
+      padding-bottom: 37px;
+    }
   }
 
   .page-footer__logo {
@@ -57,6 +67,12 @@
     margin: 21px 0 0;
   }
 }
+
+/******
+*****
+**** Стили для десктопной версии
+***
+**/
 
 @media #{$desktop-widths} {
   .page-footer__wrap {

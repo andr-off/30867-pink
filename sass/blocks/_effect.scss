@@ -2,6 +2,12 @@
   display: none;
 }
 
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
+
 @media #{$tablet-widths} {
   .effect {
     display: block;
@@ -38,6 +44,12 @@
     }
   }
 }
+
+/******
+*****
+**** Стили для десктопной версии
+***
+**/
 
 @media #{$desktop-widths} {
   .effect {

@@ -10,15 +10,22 @@
 .page-header__logo {
   display: inline-block;
   margin-left: $mobile-horizontal-margin;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
+// Стили только для мобильной и планшетной версии
 @media #{$mobile-and-tablet} {
   .page-header--open-nav,
   .page-header--nojs {
     background-color: $primary-color;
   }
 }
+
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
 
 @media #{$tablet-widths} {
   .page-header {
@@ -28,9 +35,15 @@
 
   .page-header__logo {
     margin-left: $tablet-horizontal-margin;
-    margin-bottom: 42px;
+    margin-bottom: 43px;
   }
 }
+
+/******
+*****
+**** Стили для десктопной версии
+***
+**/
 
 @media #{$desktop-widths} {
   .page-header {

@@ -33,8 +33,6 @@
     &--contrast {
       background-image: url("./../img/icon-editor-contrast.svg");
     }
-
-    //&--active {}
   }
 
   &__scale {
@@ -43,14 +41,14 @@
     margin-right: 20px;
     margin-left: 20px;
     height: 2px;
-    background-color: #283645;
+    background-color: $primary-color;
   }
 
   &__toggle {
     position: absolute;
     top: -6px;
     @include size(10px);
-    border: 2px solid #d22957;
+    border: 2px solid $secondary-color;
     border-radius: 50%;
     background-color: #f2f2f2;
   }

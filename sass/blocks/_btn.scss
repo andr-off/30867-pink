@@ -10,18 +10,18 @@
   background-color: transparent;
 
   &:hover {
-    color: #d22856;
+    color: $secondary-color;
     background-color: white;
   }
 
   &:active {
-    color: rgba(#d22856, 0.3);
+    color: rgba($secondary-color, 0.3);
     background-color: white;
   }
 
   &--send {
-    border-color: #d22856;
-    color: #d22856;
+    border-color: $secondary-color;
+    color: $secondary-color;
   }
 
   &--disabled {
@@ -29,6 +29,12 @@
     color: #dddfe0;
   }
 }
+
+/******
+*****
+**** Стили для десктопной версии
+***
+**/
 
 @media #{$desktop-widths} {
   .btn {

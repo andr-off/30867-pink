@@ -39,6 +39,12 @@
   padding-top: 28px;
 }
 
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
+
 @media #{$tablet-widths} {
   .reviews {
     padding: 55px $tablet-horizontal-margin 0;
@@ -74,6 +80,12 @@
     padding-top: 29px;
   }
 }
+
+/******
+*****
+**** Стили для десктопной версии
+***
+**/
 
 @media #{$desktop-widths} {
   .reviews {

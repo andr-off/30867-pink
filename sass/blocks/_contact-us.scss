@@ -67,6 +67,12 @@
   background-position: 50% 58%, 50% -30px, 50% 0;
 }
 
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
+
 @media #{$tablet-widths} {
   .contact-us__wrap {
     flex-direction: row;
@@ -108,6 +114,12 @@
     height: 378px;
   }
 }
+
+/******
+*****
+**** Стили для десктопной версии
+***
+**/
 
 @media #{$desktop-widths} {
   .contact-us__wrap {

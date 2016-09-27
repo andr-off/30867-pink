@@ -10,12 +10,18 @@
   font-size: px2rem(24);
   line-height: 1.2;
   font-weight: 300;
-  color: #283645;
+  color: $primary-color;
 
   &:first-child {
     margin-bottom: 30px;
   }
 }
+
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
 
 @media #{$tablet-widths} {
   .page-titles {
@@ -32,6 +38,12 @@
     }
   }
 }
+
+/******
+*****
+**** Стили для десктопной версии
+***
+**/
 
 @media #{$desktop-widths} {
   .page-titles {

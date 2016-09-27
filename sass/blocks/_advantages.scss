@@ -45,6 +45,12 @@
   color: $primary-color;
 }
 
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
+
 @media #{$tablet-widths} {
   .advantages {
     padding: 79px $tablet-horizontal-margin 43px;
@@ -65,6 +71,12 @@
     margin-bottom: 35px;
   }
 }
+
+/******
+*****
+**** Стили для десктопной версии
+***
+**/
 
 @media #{$desktop-widths} {
   .advantages {

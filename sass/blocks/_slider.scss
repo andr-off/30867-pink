@@ -27,7 +27,7 @@
   &--active::after {
     top: 5px;
     left: 5px;
-    border: 3px solid #283645;
+    border: 3px solid $primary-color;
   }
 }
 
