@@ -28,9 +28,18 @@
   font-family: $primary-font;
   font-size: px2rem(18);
   @include line-height(18, 30);
+  outline: none;
 
   &:not(:last-child) {
     margin-bottom: 16px;
+  }
+
+  &:hover {
+    border-color: $primary-color;
+  }
+
+  &:focus {
+    border-color: $secondary-color;
   }
 }
 
@@ -76,6 +85,14 @@
   margin-bottom: 36px;
 }
 
+.form__checkbox-description:hover::before {
+  border-color: $primary-color;
+}
+
+.form__checkbox-description:active::before {
+  border-color: $secondary-color;
+}
+
 .form__radiobutton-description::before {
   content: "";
   position: absolute;
@@ -96,6 +113,14 @@
   @include size(15px);
   border-radius: 50%;
   background-color: $secondary-color;
+}
+
+.form__radiobutton-description:hover::before {
+  border-color: $primary-color;
+}
+
+.form__radiobutton-description:active::before {
+  border-color: $secondary-color;
 }
 
 .form__checkbox,
@@ -127,6 +152,15 @@
   font-size: px2rem(18);
   @include line-height(18, 30);
   color: $primary-color;
+  outline: none;
+
+  &:hover {
+    border-color: $primary-color;
+  }
+
+  &:focus {
+    border-color: $secondary-color;
+  }
 }
 
 .form__btn {
@@ -143,6 +177,23 @@
   font-weight: bold;
   text-transform: uppercase;
   background-color: #2aab6d;
+  // outline: none;
+
+  &:hover {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    background-color: #1c9b5e;
+    color: rgba(white, 0.3);
+  }
+
+  &--disabled,
+  &--disabled:hover,
+  &--disabled:active {
+    background-color: #e5e5e5;
+    color: white;
+  }
 }
 
 .form__footnote {

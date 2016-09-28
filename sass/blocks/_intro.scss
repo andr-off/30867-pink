@@ -67,7 +67,7 @@
   color: white;
 
   &--form-page {
-    padding-bottom: 55px;
+    padding-bottom: 54px;
   }
 }
 
@@ -110,12 +110,13 @@
   }
 
   .intro__title {
-    padding: 180px $tablet-horizontal-margin 80px;
+    padding: 180px $tablet-horizontal-margin 140px;
     max-width: 740px;
     font-size: px2rem(50);
 
     &--form-page {
       margin: 0 auto;
+      padding-bottom: 80px;
       max-width: 500px;
     }
   }

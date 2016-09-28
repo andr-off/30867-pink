@@ -18,15 +18,37 @@
     color: rgba($secondary-color, 0.3);
     background-color: white;
   }
+}
 
-  &--send {
-    border-color: $secondary-color;
-    color: $secondary-color;
+.btn--send {
+  border-color: $secondary-color;
+  color: $secondary-color;
+
+  &:hover {
+    color: white;
+    background-color: $secondary-color;
   }
 
-  &--disabled {
-    border-color: #dddfe0;
-    color: #dddfe0;
+  &:active {
+    color: rgba(white, 0.3);
+    background-color: $secondary-color;
+  }
+}
+
+.btn--disabled {
+  border-color: #dddfe0;
+  color: #dddfe0;
+
+  &:hover {
+    border-color: #b5b9be;
+    color: #b5b9be;
+    background-color: transparent;
+  }
+
+  &:active {
+    border-color: #b5b9be;
+    color: rgba(white, 0.3);
+    background-color: #b5b9be;
   }
 }
 
