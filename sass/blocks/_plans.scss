@@ -204,7 +204,9 @@
 
 @media #{$desktop-widths} {
   .plans {
+    margin: 0 auto;
     padding: 149px 0 95px;
+    max-width: 1200px;
   }
 
   .plans__items {

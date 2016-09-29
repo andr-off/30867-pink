@@ -166,9 +166,12 @@
 .form__btn {
   display: block;
   box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 35px;
   padding: 17px 0 16px;
   width: 100%;
+  max-width: 400px;
   border: none;
   border-radius: 2px;
   font-size: px2rem(18);

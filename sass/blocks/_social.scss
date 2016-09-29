@@ -1,34 +1,43 @@
 .social {
   @include list-reset;
   font-size: 0;
+}
 
-  &__link {
-    display: inline-block;
+.social__link {
+  display: inline-block;
 
-    &:not(:last-child) {
-      margin-right: 12px;
-    }
-
-    &--twitter a {
-      background-image: url("./../img/icon-twitter.svg");
-    }
-
-    &--facebook a {
-      background-image: url("./../img/icon-facebook.svg");
-    }
-
-    &--youtube a {
-      background-image: url("./../img/icon-youtube.svg");
-    }
+  &:not(:last-child) {
+    margin-right: 12px;
   }
 
-  &__link a {
-    display: inline-block;
-    @include size(45px);
-    border: 3px solid #e9ebec;
-    border-radius: 50%;
-    background-color: white;
-    background-repeat: no-repeat;
-    background-position: center center;
+  &--twitter a {
+    background-image: url("./../img/icon-twitter.svg");
   }
+
+  &--facebook a {
+    background-image: url("./../img/icon-facebook.svg");
+  }
+
+  &--youtube a {
+    background-image: url("./../img/icon-youtube.svg");
+  }
+}
+
+.social__link a {
+  display: inline-block;
+  @include size(45px);
+  border: 3px solid rgba($primary-color, 0.1);
+  border-radius: 50%;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.social__link a:hover {
+  border-color: $primary-color;
+}
+
+.social__link a:active {
+  border-color: rgba($primary-color, 0.1);
+
 }

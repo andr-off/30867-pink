@@ -83,10 +83,11 @@
   }
 
   .photos__item {
+    margin-right: 20px;
     width: 300px;
 
-    &:nth-child(2n) {
-      margin-right: 20px;
+    &:nth-child(2n+1) {
+      margin-right: 0;
     }
   }
 
@@ -149,6 +150,17 @@
   }
 }
 
+// Промежуточный брейкопоинт
+@media (min-width: 940px) {
+  .photos .photos__item {
+    margin-right: 20px;
+  }
+
+  .photos__item:nth-child(3n+1) {
+    margin-right: 0;
+  }
+}
+
 /******
 *****
 **** Стили для планшетной версии
@@ -161,12 +173,7 @@
     max-width: 1200px;
   }
   .photos__item:not(:last-child) {
-    margin-right: 20px;
     margin-bottom: 54px;
-  }
-
-  .photos__item:nth-child(3n+1) {
-    margin-right: 0;
   }
 
   .photos__image {
