@@ -1,17 +1,61 @@
 .page-titles {
-  padding: 45px 20px 30px;
+  padding: 42px $mobile-horizontal-margin 30px;
   text-align: center;
+}
 
-  &__title {
-    margin: 0;
-    padding: 0;
-    font-size: px2rem(24);
-    line-height: 1.2;
-    font-weight: 300;
-    color: #283645;
+.page-titles__title {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 210px;
+  font-size: px2rem(24);
+  line-height: 1.2;
+  font-weight: 300;
+  color: $primary-color;
+
+  &:first-child {
+    margin-bottom: 30px;
+  }
+}
+
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
+
+@media #{$tablet-widths} {
+  .page-titles {
+    padding: 49px $tablet-horizontal-margin 43px;
+  }
+
+  .page-titles__title {
+    max-width: 340px;
+    font-size: px2rem(40);
 
     &:first-child {
-      margin-bottom: 35px;
+      margin-bottom: 0;
+      max-width: none;
+    }
+  }
+}
+
+/******
+*****
+**** Стили для десктопной версии
+***
+**/
+
+@media #{$desktop-widths} {
+  .page-titles {
+    padding: 68px $tablet-horizontal-margin 73px;
+  }
+
+  .page-titles__title {
+    max-width: 430px;
+    font-size: px2rem(50);
+
+    &:first-child {
+      max-width: none;
     }
   }
 }

@@ -8,35 +8,40 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
-  <header class="page-header">
-    <div class="page-header__logo">
-      <a href="/">
-        <img src="img/logo-pink-white-mobile.svg" alt="Pink">
-      </a>
+  <header class="page-header  page-header--nojs">
+    <div class="page-header__wrap">
+      <div class="page-header__logo">
+        <a href="/">
+          <img src="img/logo-pink-white-mobile.svg" width="75" height="24" alt="Pink">
+        </a>
+      </div>
+      <nav class="main-nav  main-nav--closed  main-nav--nojs">
+        <button class="main-nav__toggle" type="button">Открыть закрыть меню</button>
+        <ul class="main-nav__items">
+          <li class="main-nav__item"><a href="/">Главная</a></li>
+          <li class="main-nav__item  main-nav__item--active"><a>Фотографии</a></li>
+          <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+          <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
-  <nav class="main-nav">
-    <button class="main-nav__toggle main-nav__toggle--close" type="button">Открыть закрыть меню</button>
-    <div class="main-nav__wrapper">
-      <ul class="main-nav__items">
-        <li class="main-nav__item"><a href="/">Главная</a></li>
-        <li class="main-nav__item"><a>Фотографии</a></li>
-        <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
-        <li class="main-nav__item"><a href="https://htmlacademy.ru/">Html Academy</a></li>
-      </ul>
-    </div>
-  </nav>
+
   <section class="intro">
-    <div class="intro__image">
-      <h2 class="intro__title">Фотографии пользователей</h2>
-    </div>
+    <h2 class="intro__title">Фотографии<br>пользователей</h2>
   </section>
+
   <section class="page-section">
-    <div class="page-section__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</div>
+    <div class="page-section__text  page-section__text--special">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</div>
   </section>
+
   <section class="photos">
-    <div class="photos__item photos__item--panorama" data-value="Панорама дня">
-      <a href="#"><img class="photos__image" src="img/panorama-mobile@1x.jpg" alt="Панорама природы"></a>
+    <div class="photos__item  photos__item--panorama">
+      <a href="#">
+        <div class="photos__image" data-value="Панорама дня">
+          <img src="img/panorama-mobile@1x.jpg" alt="Панорама природы">
+        </div>
+      </a>
       <div class="photos__wraper">
         <div class="photos__author">
           Анна
@@ -49,8 +54,13 @@
         </div>
       </div>
     </div>
+
     <div class="photos__item">
-      <a href="#"><img class="photos__image" src="img/photo-1-mobile@1x.jpg" alt="Фотография фотоаппарата, снимающего машину"></a>
+      <a href="#">
+        <div class="photos__image">
+          <img src="img/photo-1-mobile@1x.jpg" alt="Фотография фотоаппарата, снимающего машину">
+        </div>
+      </a>
       <div class="photos__wraper">
         <div class="photos__author">
           Левон
@@ -63,8 +73,13 @@
         </div>
       </div>
     </div>
+
     <div class="photos__item">
-      <a href="#"><img class="photos__image" src="img/photo-2-mobile@1x.jpg" alt="Фотография барабанов"></a>
+      <a href="#">
+        <div class="photos__image">
+          <img src="img/photo-2-mobile@1x.jpg" alt="Фотография барабанов">
+        </div>
+      </a>
       <div class="photos__wraper">
         <div class="photos__author">
           Антон
@@ -77,8 +92,13 @@
         </div>
       </div>
     </div>
+
     <div class="photos__item">
-      <a href="#"><img class="photos__image" src="img/photo-3-mobile@1x.jpg" alt="Фотография стеклянного потолка"></a>
+      <a href="#">
+        <div class="photos__image">
+          <img src="img/photo-3-mobile@1x.jpg" alt="Фотография стеклянного потолка">
+        </div>
+      </a>
       <div class="photos__wraper">
         <div class="photos__author">
           Борис
@@ -91,8 +111,13 @@
         </div>
       </div>
     </div>
+
     <div class="photos__item">
-      <a href="#"><img class="photos__image" src="img/photo-4-mobile@1x.jpg" alt="Фотография Кубанской бахчи"></a>
+      <a href="#">
+        <div class="photos__image">
+          <img src="img/photo-4-mobile@1x.jpg" alt="Фотография Кубанской бахчи">
+        </div>
+      </a>
       <div class="photos__wraper">
         <div class="photos__author">
           Сергей
@@ -105,8 +130,13 @@
         </div>
       </div>
     </div>
+
     <div class="photos__item">
-      <a href="#"><img class="photos__image" src="img/photo-5-mobile@1x.jpg" alt="Фотография склона горы"></a>
+      <a href="#">
+        <div class="photos__image">
+          <img src="img/photo-5-mobile@1x.jpg" alt="Фотография склона горы">
+        </div>
+      </a>
       <div class="photos__wraper">
         <div class="photos__author">
           Максим
@@ -119,8 +149,13 @@
         </div>
       </div>
     </div>
+
     <div class="photos__item">
-      <a href="#"><img class="photos__image" src="img/photo-6-mobile@1x.jpg" alt="Фотография крыла самолёта"></a>
+      <a href="#">
+        <div class="photos__image">
+          <img src="img/photo-6-mobile@1x.jpg" alt="Фотография крыла самолёта">
+        </div>
+      </a>
       <div class="photos__wraper">
         <div class="photos__author">
           Надежда
@@ -134,46 +169,54 @@
       </div>
     </div>
   </section>
-  <section class="page-section">
-    <div class="page-section__text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</div>
+
+  <section class="page-section  page-section--photo-page">
+    <div class="page-section__text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</div>
   </section>
+
   <section class="editor">
     <div class="editor__photo">
       <img src="img/photo-7-mobile@1x.jpg" alt="">
     </div>
     <div class="editor__controls">
-      <a href="" class="editor__control editor__control--crop editor__control--active"></a>
-      <!-- <div class="editor__scale">
-        <div class="editor__toggle" style="left: 80%;"></div>
-      </div> -->
-      <a href="" class="editor__control editor__control--fill"></a>
-      <!-- <div class="editor__scale">
-        <div class="editor__toggle" style="left: 80%;"></div>
-      </div> -->
-      <a href="" class="editor__control editor__control--contrast"></a>
-      <div class="editor__scale">
+      <a href="" class="editor__control  editor__control--crop  editor__control--active"></a>
+      <div class="editor__scale  editor__scale--crop">
+        <div class="editor__toggle" style="left: 50%;"></div>
+      </div>
+      <a href="" class="editor__control  editor__control--fill"></a>
+      <div class="editor__scale  editor__scale--fill">
+        <div class="editor__toggle" style="left: 20%;"></div>
+      </div>
+      <a href="" class="editor__control  editor__control--contrast"></a>
+      <div class="editor__scale  editor__scale--contrast">
         <div class="editor__toggle" style="left: 80%;"></div>
       </div>
+      <div class="editor__buttons">
+        <a class="btn btn--send  editor__btn" href="#">Запостить</a>
+        <a class="btn btn--canсel editor__btn  editor__btn--cancel" href="#">Отмена</a>
+      </div>
     </div>
-    <div class="editor__buttons">
-      <a class="btn btn--send editor__btn" href="#">Запостить</a>
-      <a class="btn btn--canсel btn--disabled" href="#">Отмена</a>
-    </div>
+
   </section>
-  <footer class="page-footer">
-    <div class="page-footer__logo"><a href="/"><img src="img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Логотип"></a></div>
-    <ul class="social">
-      <li class="social__link social__link--twitter"><a href="https://twitter.com/">Twitter</a></li>
-      <li class="social__link social__link--facebook"><a href="https://www.facebook.com/">Facebook</a></li>
-      <li class="social__link social__link--youtube"><a href="https://www.youtube.com/">Youtube</a></li>
-    </ul>
-    <div class="page-footer__copyright">
-      Разработано
-      <a href="https://htmlacademy.ru/">
-        Html Academy
-        <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="Html Academy" title="Html Academy">
-      </a>
+
+  <footer class="page-footer  page-footer--photo-page">
+    <div class="page-footer__wrap">
+      <div class="page-footer__logo"><a href="/"><img src="img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Логотип"></a></div>
+      <ul class="social  page-footer__social">
+        <li class="social__link  social__link--twitter"><a href="https://twitter.com/">Twitter</a></li>
+        <li class="social__link  social__link--facebook"><a href="https://www.facebook.com/">Facebook</a></li>
+        <li class="social__link  social__link--youtube"><a href="https://www.youtube.com/">Youtube</a></li>
+      </ul>
+      <div class="page-footer__copyright">
+        Разработано
+        <a href="https://htmlacademy.ru/">
+          Html Academy
+          <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="Html Academy" title="Html Academy">
+        </a>
+      </div>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

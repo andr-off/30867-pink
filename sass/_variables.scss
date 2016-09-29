@@ -1,2 +1,14 @@
 $primary-font: "Open Sans", "Arial", sans-serif;
+
 $base-font-size: 16;
+
+$tablet-widths: (min-width: 700px);
+$desktop-widths: (min-width: 1200px);
+$mobile-and-tablet: (max-width: 1199px);
+
+$mobile-horizontal-margin: 20px / 320px * 100%;
+$tablet-horizontal-margin: 40px / 700px * 100%;
+$desktop-horizontal-margin: 130px;
+
+$primary-color: #283645;
+$secondary-color: #d22856;

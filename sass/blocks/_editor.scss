@@ -1,65 +1,207 @@
 .editor {
+  display: flex;
+  flex-direction: column;
   background-color: #f2f2f2;
   text-align: center;
+}
 
-  &__photo {
-    padding: 20px 20px 0;
+.editor__photo {
+  padding: 20px $mobile-horizontal-margin 0;
+}
+
+.editor__controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 38px $mobile-horizontal-margin 40px;
+  border-bottom: 1px solid #dddfe0;
+  font-size: 0;
+}
+
+.editor__control {
+  @include size(48px);
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &:not(:last-of-type) {
+    margin-right: 30px;
   }
 
-  &__controls {
-    padding: 42px 20px 33px;
-    border-bottom: 1px solid #dddfe0;
-    font-size: 0;
+  &--crop {
+    background-image: url("./../img/icon-editor-crop.svg");
   }
 
-  &__control {
-    display: inline-block;
-    @include size(48px);
-    background-position: center center;
-    background-repeat: no-repeat;
-
-    &:not(:last-of-type) {
-      margin-right: 30px;
-    }
-
-    &--crop {
-      background-image: url("./../img/icon-editor-crop.svg");
-    }
-
-    &--fill {
-      background-image: url("./../img/icon-editor-fill.svg");
-    }
-
-    &--contrast {
-      background-image: url("./../img/icon-editor-contrast.svg");
-    }
-
-    //&--active {}
+  &--fill {
+    background-image: url("./../img/icon-editor-fill.svg");
   }
 
-  &__scale {
+  &--contrast {
+    background-image: url("./../img/icon-editor-contrast.svg");
+  }
+}
+
+.editor__scale {
+  position: relative;
+  display: none;
+  order: 1;
+  margin-top: 37px;
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 100%;
+  height: 2px;
+  background-color: $primary-color;
+
+  &::before {
+    content: "";
     position: relative;
-    margin-top: 40px;
-    margin-right: 20px;
-    margin-left: 20px;
-    height: 2px;
-    background-color: #283645;
+    top: 35px;
+    right: 55px;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #dddfe0;
   }
 
-  &__toggle {
-    position: absolute;
-    top: -6px;
-    @include size(10px);
-    border: 2px solid #d22957;
-    border-radius: 50%;
-    background-color: #f2f2f2;
+  &::after {
+    content: "";
+    position: relative;
+    top: 34px;
+    right: -18px;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #dddfe0;
   }
 
-  &__buttons {
-    padding: 38px 20px 40px;
+  &--crop {
+    display: block;
+  }
+}
+
+.editor__toggle {
+  position: absolute;
+  top: -6px;
+  @include size(10px);
+  border: 2px solid $secondary-color;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+
+  &:active {
+    background-color: $secondary-color;
+  }
+}
+
+.editor__buttons {
+  order: 2;
+  padding: 73px 0 0;
+  width: 100%;
+}
+
+.editor__btn {
+  margin-bottom: 12px;
+}
+
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
+
+@media #{$tablet-widths} {
+  .editor {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 57px $tablet-horizontal-margin 44px;
   }
 
-  &__btn {
-    margin-bottom: 12px;
+  .editor__photo {
+    margin-right: 45px;
+    padding: 0;
+    width: 300px;
+    min-height: 400px;
+  }
+
+  .editor__controls {
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    padding: 0;
+    padding-bottom: 10px;
+    width: 275px;
+    min-height: 400px;
+    border-bottom: none;
+  }
+
+  .editor .editor__control {
+    margin: 0;
+    transform: scale(0.5);
+  }
+
+  .editor__scale {
+    order: 0;
+    display: block;
+    margin: 0;
+    margin-right: 18px;
+    width: 202px;
+  }
+
+  .editor__buttons {
+    padding: 0;
+    padding-top: 67px;
+    width: 260px;
+  }
+
+  .editor__btn {
+    margin-bottom: 24px;
+  }
+
+  .editor__btn--cancel {
+    margin-bottom: 0;
+  }
+}
+
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
+
+@media #{$desktop-widths} {
+  .editor {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 57px 60px 57px 80px;
+    max-width: 940px;
+  }
+
+  .editor__photo {
+    margin-right: 90px;
+  }
+
+  .editor__controls {
+    padding-bottom: 0;
+    width: 410px;
+  }
+
+  .editor .editor__control {
+    margin-right: 47px;
+    transform: scale(1);
+  }
+
+  .editor__scale {
+    width: 288px;
+  }
+
+  .editor__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 130px;
+    width: 100%;
+  }
+
+  .editor__btn {
+    width: 183px;
+    margin: 0;
   }
 }

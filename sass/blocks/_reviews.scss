@@ -1,27 +1,131 @@
 .reviews {
-  padding: 50px 20px 43px;
+  padding: 42px $mobile-horizontal-margin 43px;
   text-align: center;
+}
 
-  &__item {
-    margin: 0;
+.reviews__item {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.reviews__author-wrap {
+  margin-bottom: 13px;
+}
+
+.reviews__author-name {
+  display: block;
+  font-size: px2rem(18);
+  @include line-height(18, 30);
+  font-weight: bold;
+  font-style: normal;
+}
+
+.reviews__about-author {
+  display: none;
+}
+
+.reviews__quote {
+  font-size: px2rem(14);
+  @include line-height(14, 30);
+  color: $primary-color;
+}
+
+.reviews__arrow {
+  display: none;
+}
+
+.reviews__toggles {
+  padding-top: 28px;
+}
+
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
+
+@media #{$tablet-widths} {
+  .reviews {
+    padding: 55px $tablet-horizontal-margin 0;
   }
 
-  &__author-name {
+  .reviews__author-wrap {
+    order: 1;
+    margin-top: 34px;
+    margin-bottom: 0;
+  }
+
+  .reviews__author-name {
+    margin-bottom: 2px;
+    font-size: px2rem(20);
+    @include line-height(20, 30);
+  }
+
+  .reviews__about-author {
     display: block;
-    margin-bottom: 28px;
-    font-size: px2rem(18);
-    @include line-height(18, 30);
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  &__quote {
     font-size: px2rem(14);
     @include line-height(14, 30);
-    color: #283645;
+    color: $primary-color;
   }
 
-  &__toggles {
-    padding-top: 40px;
+  .reviews__quote {
+    margin: 0 auto;
+    max-width: 735px;
+    font-size: px2rem(18);
+    @include line-height(18, 30);
+  }
+
+  .reviews__toggles {
+    padding-top: 29px;
+  }
+}
+
+/******
+*****
+**** Стили для десктопной версии
+***
+**/
+
+@media #{$desktop-widths} {
+  .reviews {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 185px 0 40px;
+    width: 100%;
+    max-width: 940px;
+  }
+
+  .reviews__author-wrap {
+    margin-top: 36px;
+  }
+
+  .reviews__author-name {
+    font-size: px2rem(24);
+    @include line-height(24, 30);
+  }
+
+  .reviews__about-author {
+    font-size: px2rem(18);
+    @include line-height(18, 30);
+  }
+
+  .reviews__arrow {
+    position: absolute;
+    display: block;
+    bottom: 160px;
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+  }
+
+  .reviews__toggles {
+    display: none;
   }
 }

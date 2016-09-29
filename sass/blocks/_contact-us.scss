@@ -1,65 +1,153 @@
-.contact-us {
-  padding: 45px 20px 0;
+.contact-us__wrap {
+  padding: 38px $mobile-horizontal-margin 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  &__title {
-    margin-bottom: 35px;
-    font-size: px2rem(24);
-    @include line-height(24, 30);
-    font-weight: 300;
+.contact-us__title {
+  margin: 0;
+  margin-bottom: 35px;
+  width: 100%;
+  font-size: px2rem(24);
+  @include line-height(24, 30);
+  font-weight: 300;
+}
+
+.contact-us__call-to-action {
+  margin-bottom: 3px;
+  font-size: px2rem(18);
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.contact-us__l-wrap:nth-of-type(2) .contact-us__call-to-action {
+  margin-bottom: 5px;
+}
+
+.contact-us__l-wrap:nth-of-type(3) .contact-us__call-to-action {
+  margin-bottom: 6px;
+}
+
+.contact-us__phone,
+.contact-us__email,
+.contact-us__address {
+  margin-bottom: 23px;
+  font-size: px2rem(24);
+  line-height: 1.2;
+  font-weight: 300;
+  color: $secondary-color;
+}
+
+.contact-us__email {
+  margin-bottom: 26px;
+}
+
+.contact-us__email a {
+  text-decoration: none;
+  color: $secondary-color;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.contact-us__address {
+  margin-bottom: 40px;
+}
+
+.contact-us__map {
+  height: 200px;
+  background-image:
+    url("./../img/icon-map-marker.svg"),
+    url("./../img/bg-triangle-white-footer.svg"),
+    url("./../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 50% 58%, 50% -30px, 50% 0;
+}
+
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
+
+@media #{$tablet-widths} {
+  .contact-us__wrap {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 46px $tablet-horizontal-margin 0;
   }
 
-  &__call-to-action {
-    margin-bottom: 5px;
-    font-size: px2rem(18);
+  .contact-us__title {
+    margin-bottom: 45px;
+    font-size: px2rem(40);
     line-height: 1.2;
-    font-weight: bold;
   }
 
-  &__phone,
-  &__email,
-  &__address {
-    margin-bottom: 20px;
-    font-size: px2rem(24);
-    line-height: 1.2;
-    font-weight: 300;
-    color: #d22856;
-  }
+  .contact-us__l-wrap {
+    width: 50%;
 
-  &__email a {
-    text-decoration: none;
-    color: #d22856;
-  }
-
-  &__address {
-    margin-bottom: 40px;
-  }
-
-  &__map {
-    position: relative;
-    margin-left: -20px;
-    margin-right: -20px;
-    height: 200px;
-    background: url("./../img/bg-map-mobile@1x.png") no-repeat center top;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      @include size(50%, 32px);
-      background: linear-gradient(to left bottom, #ffffff 0%, #ffffff 50%, transparent 51%, transparent 100%);
+    &:not(:last-of-type) {
+      margin-bottom: 47px;
     }
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: block;
-      @include size(50%, 32px);
-      background: linear-gradient(to right bottom, #ffffff 0%, #ffffff 50%, transparent 51%, transparent 100%);
+  .contact-us .contact-us__call-to-action {
+    margin-bottom: 6px;
+  }
+
+  .contact-us__l-wrap:nth-of-type(2) .contact-us__call-to-action,
+  .contact-us__l-wrap:nth-of-type(3) .contact-us__call-to-action {
+      margin-bottom: 8px;
+  }
+
+  .contact-us__phone,
+  .contact-us__email,
+  .contact-us__address {
+    margin-bottom: 0;
+  }
+
+  .contact-us__map {
+    margin-top: 25px;
+    height: 378px;
+  }
+}
+
+/******
+*****
+**** Стили для десктопной версии
+***
+**/
+
+@media #{$desktop-widths} {
+  .contact-us__wrap {
+    margin: 0 auto;
+    padding: 64px 0 0;
+    max-width: 940px;
+  }
+
+   .contact-us .contact-us__l-wrap {
+    width: 33%;
+    margin: 0;
+
+    &:nth-of-type(2) {
+      order: 1;
     }
+  }
+
+  .contact-us__title {
+    margin-bottom: 58px;
+    font-size: px2rem(50);
+  }
+
+  .contact-us .contact-us__l-wrap .contact-us__call-to-action {
+    margin-bottom: 26px;
+  }
+
+  .contact-us__map {
+    margin-top: 20px;
+    height: 503px;
   }
 }

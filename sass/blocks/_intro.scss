@@ -1,62 +1,161 @@
 .intro {
+  position: relative;
   text-align: center;
-  background-color: #1d2631;
+  background: #1d2631 url("./../img/bg-back-mobile@1x.jpg") no-repeat center top;
 
-  &__image {
+  &--index-page::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 176px;
+    @include size(258px, 286px);
+    background: url("./../img/iphone-hand-mobile@1x.png") no-repeat 0 0;
+  }
+}
+
+.intro--index-page .intro__inner {
+  padding: 462px $mobile-horizontal-margin 28px;
+}
+
+.intro__heading {
+  display: none;
+  margin: 0;
+  padding: 0;
+  font-size: px2rem(40);
+  line-height: 1.2;
+  font-weight: 300;
+  color: white;
+}
+
+.intro__btn {
+  margin-top: 28px;
+}
+
+.intro__icons {
+  @include list-reset;
+  margin-top: 32px;
+  margin-bottom: 22px;
+}
+
+.intro__icon {
+  display: inline-block;
+  vertical-align: bottom;
+
+  &:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+.intro__description {
+  font-size: px2rem(14);
+  @include line-height(14, 24);
+  font-weight: 300;
+  color: white;
+}
+
+.intro__title {
+  margin: 0 auto;
+  padding: 98px $mobile-horizontal-margin 83px;
+  max-width: 350px;
+  font-size: px2rem(24);
+  line-height: 1.2;
+  font-weight: 300;
+  color: white;
+
+  &--form-page {
+    padding-bottom: 54px;
+  }
+}
+
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
+
+@media #{$tablet-widths} {
+  .intro--index-page::after {
+    top: auto;
+    bottom: 0;
+  }
+
+  .intro--index-page .intro__inner {
     position: relative;
-    padding: 35px 20px 0;
-    height: 171px;
-    background: url("./../img/bg-back-mobile@1x.jpg") no-repeat center top;
-
-    &--index-page {
-      height: 395px;
-    }
-
-    &--index-page::after {
-      content: "";
-      position: absolute;
-      left: calc(50% - 153px);
-      bottom: 0;
-      @include size(258px, 286px);
-      background: url("./../img/iphone-hand-mobile@1x.png") no-repeat 0 0;
-    }
+    z-index: 10;
+    padding: 203px $tablet-horizontal-margin 109px;
+    width: 300px;
   }
 
-  &__wrap {
-    padding: 28px 20px 32px;
+  .intro__heading {
+    display: block;
+    padding: 0 40px;
   }
 
-  &__icons {
-    @include list-reset;
-    margin-top: 32px;
-    margin-bottom: 28px;
+  .intro__btn {
+    margin-top: 31px;
   }
 
-  &__icon {
-    display: inline-block;
-    vertical-align: bottom;
+  .intro__icons {
+    margin-top: 46px;
+    margin-bottom: 37px;
+  }
 
-    &:not(:last-child) {
-      margin-right: 35px;
-    }
+  .intro__description {
+    font-size: px2rem(18);
+    @include line-height(18, 24);
+  }
 
-    img {
-      display: block;
+  .intro__title {
+    padding: 180px $tablet-horizontal-margin 140px;
+    max-width: 740px;
+    font-size: px2rem(50);
+
+    &--form-page {
+      margin: 0 auto;
+      padding-bottom: 80px;
+      max-width: 500px;
     }
   }
+}
 
-  &__description {
-    font-size: px2rem(14);
-    @include line-height(14, 24);
-    font-weight: 300;
-    color: white;
+/******
+*****
+**** Стили для десктопной версии
+***
+**/
+
+@media #{$desktop-widths} {
+  .intro__wrap {
+    margin: 0 auto;
+    max-width: 940px;
+  }
+  .intro--index-page .intro__inner {
+    padding: 217px 0 120px;
   }
 
-  &__title {
-    margin: 0;
-    font-size: px2rem(24);
-    line-height: 1.2;
-    font-weight: 300;
-    color: white;
+  .intro__title {
+    padding: 173px 0 101px;
+
+    &--form-page {
+      max-width: 750px;
+    }
+  }
+
+  .intro__heading {
+    padding: 0;
+    font-size: px2rem(50);
+  }
+
+  .intro__btn {
+    margin-top: 53px;
+  }
+
+  .intro__icons {
+    margin-top: 65px;
+    margin-bottom: 59px;
   }
 }

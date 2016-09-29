@@ -1,67 +1,187 @@
 .photos {
+  display: flex;
+  flex-direction: column;
   font-size: px2rem(14);
   @include line-height(14, 24);
   text-align: center;
-  color: #283645;
+  color: $primary-color;
   text-align: center;
+}
 
-  &__item {
+.photos__image {
+  box-sizing: border-box;
+  padding: 0 $mobile-horizontal-margin;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.photos__wraper {
+  margin: 0 $mobile-horizontal-margin;
+  padding: 17px 17px 20px;
+  text-align: left;
+  background-color: #f2f2f2;
+}
+
+.photos__author {
+  font-weight: bold;
+}
+
+.photos__time {
+  font-size: px2rem(12);
+  @include line-height(12, 24);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.photos__like {
+  margin-top: 10px;
+  padding-left: 32px;
+  font-size: px2rem(12);
+  @include line-height(12, 24);
+  text-transform: uppercase;
+  color: $secondary-color;
+  background: url("./../img/icon-heart.svg") no-repeat 0 50%;
+}
+
+.photos__item--panorama .photos__image {
     position: relative;
-    background-color: #f2f2f2;
+    padding: 0;
 
-    &:not(:last-child) {
-      margin-bottom: 20px;
-    }
-
-    &--panorama img {
-      padding: 0;
-    }
-
-    &--panorama::before {
-      content: attr(data-value);
-      position: absolute;
-      top: 0;
-      right: 20px;
-      padding: 6px 20px;
-      font-size: px2rem(12);
-      @include line-height(12, 24);
-      font-weight: bold;
-      text-transform: uppercase;
-      color: white;
-      background-color: #d22856;
-    }
-  }
-
-  &__image {
-    box-sizing: border-box;
-    padding: 0 20px;
-    max-width: 100%;
-  }
-
-  &__wraper {
-    padding: 20px 20px 25px;
-    text-align: left;
-  }
-
-  &__author {
+  &::before {
+    content: attr(data-value);
+    position: absolute;
+    top: 0;
+    right: $mobile-horizontal-margin;
+    padding: 6px 20px;
+    font-size: px2rem(12);
+    @include line-height(12, 24);
     font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    background-color: $secondary-color;
+  }
+}
+
+.photos__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
+
+@media #{$tablet-widths} {
+  .photos {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  &__time {
-    font-size: px2rem(12);
-    @include line-height(12, 24);
-    font-weight: 300;
-    text-transform: uppercase;
+  .photos__item {
+    width: 300px;
+
+    &:nth-child(2n) {
+      margin-right: 20px;
+    }
   }
 
-  &__like {
-    position: relative;
-    margin-top: 10px;
-    padding-left: 32px;
-    font-size: px2rem(12);
-    @include line-height(12, 24);
-    text-transform: uppercase;
-    color: #d22856;
-    background: url("./../img/icon-heart.svg") no-repeat 0 50%;
+  .photos__image {
+    padding: 0;
+    min-height: 300px;
+  }
+
+  .photos__wraper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 24px 28px 22px;
+    min-height: 155px;
+  }
+
+  .photos__like {
+    margin-top: auto;
+    padding: 0;
+    padding-right: 32px;
+    background-position: 99% 50%;
+  }
+
+  .photos .photos__item--panorama {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+
+  .photos__item--panorama .photos__image {
+    min-height: 509px;
+
+    &::before{
+      top: 57px;
+      right: $tablet-horizontal-margin;
+    }
+  }
+
+  .photos__item--panorama .photos__wraper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 $tablet-horizontal-margin;
+    padding: 24px 28px 24px;
+    min-height: auto;
+  }
+
+  .photos__item--panorama .photos__description {
+    order: 1;
+    width: 100%;
+  }
+
+  .photos__item--panorama .photos__like {
+    margin: 0;
+    padding: 0;
+    padding-right: 32px;
+  }
+}
+
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
+
+@media #{$desktop-widths} {
+  .photos {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  .photos__item:not(:last-child) {
+    margin-right: 20px;
+    margin-bottom: 54px;
+  }
+
+  .photos__item:nth-child(3n+1) {
+    margin-right: 0;
+  }
+
+  .photos__image {
+    min-height: 400px;
+  }
+  .photos .photos__item--panorama {
+    margin-bottom: 50px;
+  }
+
+  .photos__item--panorama .photos__wraper {
+    margin: 0 auto;
+    max-width: 940px;
+  }
+
+  .photos__item--panorama .photos__image::before {
+    right: $desktop-horizontal-margin;
   }
 }
