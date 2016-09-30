@@ -46,25 +46,6 @@
   background: url("./../img/icon-heart.svg") no-repeat 0 50%;
 }
 
-.photos__item--panorama .photos__image {
-    position: relative;
-    padding: 0;
-
-  &::before {
-    content: attr(data-value);
-    position: absolute;
-    top: 0;
-    right: $mobile-horizontal-margin;
-    padding: 6px 20px;
-    font-size: px2rem(12);
-    @include line-height(12, 24);
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-    background-color: $secondary-color;
-  }
-}
-
 .photos__item:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -86,7 +67,7 @@
     margin-right: 20px;
     width: 300px;
 
-    &:nth-child(2n+1) {
+    &:nth-child(2n) {
       margin-right: 0;
     }
   }
@@ -118,36 +99,6 @@
     margin-bottom: 50px;
     width: 100%;
   }
-
-  .photos__item--panorama .photos__image {
-    min-height: 509px;
-
-    &::before{
-      top: 57px;
-      right: $tablet-horizontal-margin;
-    }
-  }
-
-  .photos__item--panorama .photos__wraper {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 $tablet-horizontal-margin;
-    padding: 24px 28px 24px;
-    min-height: auto;
-  }
-
-  .photos__item--panorama .photos__description {
-    order: 1;
-    width: 100%;
-  }
-
-  .photos__item--panorama .photos__like {
-    margin: 0;
-    padding: 0;
-    padding-right: 32px;
-  }
 }
 
 // Промежуточный брейкопоинт
@@ -156,7 +107,7 @@
     margin-right: 20px;
   }
 
-  .photos__item:nth-child(3n+1) {
+  .photos__item:nth-child(3n) {
     margin-right: 0;
   }
 }
@@ -172,23 +123,12 @@
     margin: 0 auto;
     max-width: 1200px;
   }
+
   .photos__item:not(:last-child) {
     margin-bottom: 54px;
   }
 
   .photos__image {
     min-height: 400px;
-  }
-  .photos .photos__item--panorama {
-    margin-bottom: 50px;
-  }
-
-  .photos__item--panorama .photos__wraper {
-    margin: 0 auto;
-    max-width: 940px;
-  }
-
-  .photos__item--panorama .photos__image::before {
-    right: $desktop-horizontal-margin;
   }
 }
