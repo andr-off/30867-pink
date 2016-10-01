@@ -9,7 +9,7 @@
 </head>
 <body>
   <header class="page-header  page-header--nojs">
-    <div class="page-header__wrap">
+    <div class="page-header__wrap container">
       <a class="page-header__logo">
         <img src="img/logo-pink-white-mobile.svg" width="75" height="24" alt="Pink">
       </a>
@@ -26,7 +26,7 @@
   </header>
 
   <section class="intro  intro--index-page">
-    <div class="intro__wrap">
+    <div class="intro__wrap container">
       <div class="intro__inner">
         <h2 class="intro__heading">Взгляните на жизнь иначе!</h2>
         <a href="#" class="btn  btn--download  intro__btn">Скачать приложение</a>
@@ -46,7 +46,7 @@
   </section>
 
   <section class="advantages">
-    <ul class="advantages__items">
+    <ul class="advantages__items container">
       <li class="advantages__item">
         <div class="advantages__image  advantages__image--mood"></div>
         <h2 class="advantages__title">Поднимает настроение</h2>
@@ -66,7 +66,7 @@
   </section>
 
   <section class="effect">
-    <div class="effect__wrap">
+    <div class="container">
       <div class="effect__inner">
         <h2 class="effect__title">Эффект <br>на 24 часа!</h2>
         <div class="effect__description">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</div>
@@ -76,7 +76,7 @@
   </section>
 
   <section class="reviews">
-    <div class="reviews__items  slider">
+    <div class="reviews__items  container  slider">
       <blockquote class="reviews__item">
         <div class="reviews__author-wrap">
           <cite class="reviews__author-name">Николай Петров</cite>
@@ -84,26 +84,18 @@
         </div>
         <div class="reviews__quote">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</div>
       </blockquote>
-      <!-- <blockquote class="reviews__item">
-        <cite class="reviews__author-name"></cite>
-        <div class="reviews__quote"></div>
-      </blockquote>
-      <blockquote class="reviews__item">
-        <cite class="reviews__author-name"></cite>
-        <div class="reviews__quote"></div>
-      </blockquote> -->
       <div class="slider__arrow  slider__arrow--left  reviews__arrow  reviews__arrow--left"></div>
       <div class="slider__arrow  slider__arrow--right  reviews__arrow  reviews__arrow--right"></div>
+      <ul class="reviews__toggles  slider__toggles">
+        <li class="slider__toggle  slider__toggle--active"></li>
+        <li class="slider__toggle"></li>
+        <li class="slider__toggle"></li>
+      </ul>
     </div>
-    <ul class="reviews__toggles  slider__toggles">
-      <li class="slider__toggle  slider__toggle--active"></li>
-      <li class="slider__toggle"></li>
-      <li class="slider__toggle"></li>
-    </ul>
   </section>
 
   <section class="plans">
-    <ul class="plans__items slider">
+    <ul class="plans__items  container  slider">
       <li class="plans__item  plans__item--first">
         <header class="plans__header">
         </header>
@@ -111,7 +103,7 @@
         <div class="plans__feature">Смайлики</div>
         <div class="plans__feature">Комментарии</div>
       </li>
-      <li class="plans__item">
+      <li class="plans__item  plans__left-item">
         <header class="plans__header">
           <div class="plans__name">База</div>
           <div class="plans__price">1,99 USD</div>
@@ -129,7 +121,7 @@
         <div class="plans__feature  plans__feature--available">Смайлики</div>
         <div class="plans__feature  plans__feature--not-available">Комментарии</div>
       </li>
-      <li class="plans__item">
+      <li class="plans__item  plans__right-item">
         <header class="plans__header">
           <div class="plans__name">Анлим</div>
           <div class="plans__price">9,99 USD</div>
@@ -147,7 +139,7 @@
   </section>
 
   <section class="contact-us">
-    <div class="contact-us__wrap">
+    <div class="contact-us__wrap  container">
       <h2 class="contact-us__title">Остались вопросы?<br>
         Свяжитесь с нами!</h2>
       <div class="contact-us__l-wrap">
@@ -168,7 +160,7 @@
   </section>
 
   <footer class="page-footer  page-footer--index-page">
-    <div class="page-footer__wrap">
+    <div class="page-footer__wrap  container">
       <div class="page-footer__logo"><a href="/"><img src="img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Логотип"></a></div>
       <ul class="social  page-footer__social">
         <li class="social__link  social__link--twitter"><a href="https://twitter.com/">Twitter</a></li>

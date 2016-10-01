@@ -1,7 +1,5 @@
 .panorama {
-  margin: 0 auto;
   padding-bottom: 20px;
-  max-width: 1200px;
   font-size: px2rem(14);
   @include line-height(14, 24);
   text-align: center;
@@ -110,7 +108,6 @@
 @media #{$desktop-widths} {
   .panorama__wraper {
     margin: 0 auto;
-    max-width: 940px;
   }
 
   .panorama__image::before {

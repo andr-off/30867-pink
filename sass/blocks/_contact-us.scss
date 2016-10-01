@@ -74,10 +74,6 @@
 **/
 
 @media #{$tablet-widths} {
-  .contact-us {
-    margin: 0 auto;
-    max-width: 1200px;
-  }
   .contact-us__wrap {
     flex-direction: row;
     flex-wrap: wrap;
@@ -127,12 +123,10 @@
 
 @media #{$desktop-widths} {
   .contact-us__wrap {
-    margin: 0 auto;
     padding: 64px 0 0;
-    max-width: 940px;
   }
 
-   .contact-us .contact-us__l-wrap {
+  .contact-us .contact-us__l-wrap {
     width: 33%;
     margin: 0;
 

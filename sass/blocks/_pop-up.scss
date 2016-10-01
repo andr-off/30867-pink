@@ -31,7 +31,7 @@
   background-color: #f2f2f2;
 }
 
-.pop-up--fail .pop-up__btn-wrap {
+.pop-up__btn-wrap--fail {
   padding-top: 7px;
   background-color: white;
 }
@@ -81,16 +81,16 @@
     width: 780px;
   }
 
-  .pop-up--success .pop-up__title {
+  .pop-up__title--success {
     max-width: none;
   }
 
-  .pop-up--success .pop-up__description {
+  .pop-up__description--success {
     margin: 0 auto 35px;
     max-width: 390px;
   }
 
-  .pop-up--success .pop-up__btn-wrap {
+  .pop-up__btn-wrap--success {
     padding-left: 160px;
     padding-right: 160px;
   }

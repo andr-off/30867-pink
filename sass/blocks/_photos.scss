@@ -119,11 +119,6 @@
 **/
 
 @media #{$desktop-widths} {
-  .photos {
-    margin: 0 auto;
-    max-width: 1200px;
-  }
-
   .photos__item:not(:last-child) {
     margin-bottom: 54px;
   }

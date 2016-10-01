@@ -53,19 +53,12 @@
 
 @media #{$desktop-widths} {
   .effect {
-    margin: 0 auto;
     padding: 157px 0 114px;
-    max-width: 1200px;
     background-color: #f2f2f2;
 
     br {
       display: none;
     }
-  }
-
-  .effect__wrap {
-    margin: 0 auto;
-    max-width: 940px;
   }
 
   .effect__inner {

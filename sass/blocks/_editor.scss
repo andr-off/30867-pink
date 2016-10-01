@@ -83,7 +83,7 @@
 
 .editor__buttons {
   order: 2;
-  padding: 73px 0 0;
+  padding: 65px 0 0;
   width: 100%;
   max-width: 450px;
 }
@@ -193,9 +193,7 @@
 @media #{$desktop-widths} {
   .editor {
     box-sizing: border-box;
-    margin: 0 auto;
     padding: 57px 60px 57px 80px;
-    max-width: 940px;
   }
 
   .editor__photo {

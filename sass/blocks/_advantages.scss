@@ -80,9 +80,7 @@
 
 @media #{$desktop-widths} {
   .advantages {
-    margin: 0 auto;
     padding: 0;
-    max-width: 1200px;
 
     &:after {
       display: none;
@@ -93,10 +91,9 @@
     box-sizing: border-box;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 0 auto; //Без этого не работает. Что-то перебивает стили класса .container
     padding: 0 30px;
     width: 100%;
-    max-width: 940px;
     text-align: center;
   }
 

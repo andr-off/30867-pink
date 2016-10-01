@@ -134,13 +134,9 @@
 
 @media #{$desktop-widths} {
   .intro {
-    margin: 0 auto;
-    max-width: 1200px;
+    margin: 0;
   }
-  .intro__wrap {
-    margin: 0 auto;
-    max-width: 940px;
-  }
+
   .intro--index-page .intro__inner {
     padding: 217px 0 120px;
   }
