@@ -108,6 +108,7 @@
 @media #{$desktop-widths} {
   .panorama__wraper {
     margin: 0 auto;
+    max-width: 940px;
   }
 
   .panorama__image::before {
