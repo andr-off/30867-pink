@@ -4,13 +4,14 @@
 }
 
 .plans__items {
+  position: relative;
   display: flex;
   justify-content: center;
   @include list-reset;
 }
 
 .plans__item {
-  width: 320px;
+  width: 100%;
   display: none;
 
   &:nth-child(3) {
@@ -112,6 +113,27 @@
   padding-top: 35px;
 }
 
+@media (max-width: 699px) {
+  .plans {
+    overflow: hidden;
+  }
+
+  .plans__left-item,
+  .plans__right-item {
+    position: absolute;
+    top: 0;
+    display: block;
+  }
+
+  .plans__left-item {
+    left: -100%;
+  }
+
+  .plans__right-item {
+    right: -100%;
+  }
+}
+
 /******
 *****
 **** Стили для планшетной версии
@@ -125,7 +147,7 @@
   .plans__items {
     margin: 0 auto;
     width: 100%;
-    max-width: 800px;
+    max-width: 620px;
     vertical-align: bottom;
   }
 
@@ -208,7 +230,6 @@
   }
 
   .plans__items {
-    margin: 0 auto;
     max-width: 940px;
   }
 

@@ -1,4 +1,5 @@
 .btn {
+  box-sizing: border-box;
   display: block;
   padding: 15px 0 16px;
   border-radius: 25px;
@@ -8,19 +9,20 @@
   text-decoration: none;
   color: white;
   background-color: transparent;
-
-  &:hover {
-    color: $secondary-color;
-    background-color: white;
-  }
-
-  &:active {
-    color: rgba($secondary-color, 0.3);
-    background-color: white;
-  }
 }
 
-.btn--send {
+
+.btn--download:hover {
+  color: $secondary-color;
+  background-color: white;
+}
+
+.btn--download:active {
+  color: rgba($secondary-color, 0.3);
+  background-color: white;
+}
+
+.btn--send-file {
   border-color: $secondary-color;
   color: $secondary-color;
 
@@ -35,7 +37,7 @@
   }
 }
 
-.btn--disabled {
+.btn--cancel {
   border-color: #dddfe0;
   color: #dddfe0;
 
@@ -49,6 +51,33 @@
     border-color: #b5b9be;
     color: rgba(white, 0.3);
     background-color: #b5b9be;
+  }
+}
+
+.btn--send {
+  padding: 17px 0 16px;
+  border: none;
+  border-radius: 2px;
+  @include line-height(18, 30);
+  text-transform: uppercase;
+  background-color: #2aab6d;
+
+
+  &:hover {
+    color: white;
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    background-color: #1c9b5e;
+    color: rgba(white, 0.3);
+  }
+
+  &--disabled,
+  &--disabled:hover,
+  &--disabled:active {
+    background-color: #e5e5e5;
+    color: white;
   }
 }
 

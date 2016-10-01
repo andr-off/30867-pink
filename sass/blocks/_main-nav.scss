@@ -47,7 +47,7 @@
 }
 
 // Стили только для мобильной и планшетной весии
-@media #{$mobile-and-tablet} {
+@media (max-width: 899px) {
   .main-nav--closed .main-nav__items {
     display: none;
   }
@@ -73,6 +73,7 @@
     top: -66px;
     right: $tablet-horizontal-margin;
   }
+
 }
 
 /******
@@ -81,7 +82,7 @@
 ***
 **/
 
-@media #{$desktop-widths} {
+@media (min-width: 900px) {
   .main-nav {
     flex-grow: 1;
   }
@@ -92,7 +93,7 @@
   }
 
   .main-nav__item:not(:last-child) {
-    margin-right: 80px;
+    margin-right: 7%;
   }
 
   .main-nav__item:first-child {
@@ -123,5 +124,11 @@
 
   .main-nav__toggle {
     display: none;
+  }
+}
+
+@media #{$desktop-widths} {
+  .main-nav__item:not(:last-child) {
+    margin-right: 80px;
   }
 }

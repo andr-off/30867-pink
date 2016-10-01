@@ -1,0 +1,117 @@
+.panorama {
+  padding-bottom: 20px;
+  font-size: px2rem(14);
+  @include line-height(14, 24);
+  text-align: center;
+  color: $primary-color;
+  text-align: center;
+}
+.panorama__image {
+    position: relative;
+
+  &::before {
+    content: attr(data-value);
+    position: absolute;
+    top: 0;
+    right: $mobile-horizontal-margin;
+    padding: 6px 20px;
+    font-size: px2rem(12);
+    @include line-height(12, 24);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    background-color: $secondary-color;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.panorama__wraper {
+  box-sizing: border-box;
+  margin: 0 $mobile-horizontal-margin;
+  padding: 17px 17px 20px;
+  text-align: left;
+  background-color: #f2f2f2;
+}
+
+.panorama__author {
+  font-weight: bold;
+}
+
+.panorama__time {
+  font-size: px2rem(12);
+  @include line-height(12, 24);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.panorama__like {
+  margin-top: 10px;
+  padding-left: 32px;
+  font-size: px2rem(12);
+  @include line-height(12, 24);
+  text-transform: uppercase;
+  color: $secondary-color;
+  background: url("./../img/icon-heart.svg") no-repeat 0 50%;
+}
+
+/******
+*****
+**** Стили для планшетной версии
+***
+**/
+@media #{$tablet-widths} {
+  .panorama {
+    padding-bottom: 50px;
+  }
+  .panorama__image {
+    min-height: 509px;
+
+    &::before{
+      top: 57px;
+      right: $tablet-horizontal-margin;
+    }
+  }
+
+  .panorama__wraper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 $tablet-horizontal-margin;
+    padding: 24px 28px 24px;
+    min-height: auto;
+  }
+
+  .panorama__description {
+    order: 1;
+    width: 100%;
+  }
+
+  .panorama__like {
+    margin: 0;
+    padding: 0;
+    padding-right: 32px;
+    background-position: 99% 50%;
+  }
+}
+
+
+/******
+*****
+**** Стили для десктопной версии
+***
+**/
+@media #{$desktop-widths} {
+  .panorama__wraper {
+    margin: 0 auto;
+    max-width: 940px;
+  }
+
+  .panorama__image::before {
+    right: $desktop-horizontal-margin;
+  }
+}

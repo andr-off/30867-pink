@@ -9,6 +9,7 @@
   display: inline-block;
   @include size(22px);
   vertical-align: middle;
+  cursor: pointer;
 
   &::after {
     content: "";
@@ -17,18 +18,29 @@
     left: 8px;
     @include size(6px);
     border-radius: 50%;
-    background-color: #bec2c7;
+    background-color: rgba($primary-color, 0.3);
   }
 
   &:not(:last-child) {
     margin-right: 3px;
   }
+}
 
-  &--active::after {
-    top: 5px;
-    left: 5px;
-    border: 3px solid $primary-color;
-  }
+.slider__toggle:hover::after {
+  background-color: rgba($primary-color, 0.6);
+}
+
+.slider__toggle:active::after {
+  background-color: rgba($primary-color, 0.1);
+}
+
+.slider__toggle--active::after,
+.slider__toggle--active:hover::after,
+.slider__toggle--active:active::after {
+  top: 5px;
+  left: 5px;
+  background-color: white;
+  border: 3px solid $primary-color;
 }
 
 .slider__arrow {

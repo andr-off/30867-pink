@@ -89,12 +89,14 @@
 
 @media #{$desktop-widths} {
   .reviews {
-    position: relative;
     box-sizing: border-box;
-    margin: 0 auto;
-    padding: 185px 0 40px;
+    padding: 0;
     width: 100%;
-    max-width: 940px;
+  }
+
+  .reviews__items {
+    position: relative;
+    padding: 185px 0 40px;
   }
 
   .reviews__author-wrap {

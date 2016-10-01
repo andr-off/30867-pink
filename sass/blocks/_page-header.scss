@@ -39,13 +39,7 @@
   }
 }
 
-/******
-*****
-**** Стили для десктопной версии
-***
-**/
-
-@media #{$desktop-widths} {
+@media (min-width: 900px) {
   .page-header {
     padding-top: 0;
   }
@@ -54,12 +48,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
-    max-width: 940px;
+    padding: 0 $tablet-horizontal-margin;
     min-height: 110px;
   }
 
   .page-header__logo {
     margin: 0;
+  }
+}
+
+/******
+*****
+**** Стили для десктопной версии
+***
+**/
+
+@media #{$desktop-widths} {
+  .page-header {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-header__wrap {
+    // margin: 0 auto;
+    padding: 0;
+    // max-width: 940px;
   }
 }
