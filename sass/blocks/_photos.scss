@@ -74,7 +74,6 @@
 
   .photos__image {
     padding: 0;
-    min-height: 300px;
   }
 
   .photos__wraper {
@@ -121,9 +120,5 @@
 @media #{$desktop-widths} {
   .photos__item:not(:last-child) {
     margin-bottom: 54px;
-  }
-
-  .photos__image {
-    min-height: 400px;
   }
 }

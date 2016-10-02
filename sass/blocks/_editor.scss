@@ -30,6 +30,7 @@
 }
 
 .editor__control {
+  position: relative;
   @include size(48px);
   background-position: center center;
   background-repeat: no-repeat;
@@ -37,18 +38,13 @@
   &:not(:last-of-type) {
     margin-right: 30px;
   }
+}
 
-  &--crop {
-    background-image: url("./../img/icon-editor-crop.svg");
-  }
-
-  &--fill {
-    background-image: url("./../img/icon-editor-fill.svg");
-  }
-
-  &--contrast {
-    background-image: url("./../img/icon-editor-contrast.svg");
-  }
+.editor__control svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .editor__scale {
@@ -92,6 +88,22 @@
   margin-bottom: 12px;
 }
 
+// Стили только для мобильной версии
+
+@media (max-width: 699px) {
+  .editor__control svg {
+    fill: rgba($primary-color, 0.3);
+
+    &:hover {
+      fill: rgba($primary-color, 0.5);
+    }
+  }
+
+  .editor__control--active svg {
+    fill: $secondary-color;
+  }
+}
+
 /******
 *****
 **** Стили для планшетной версии
@@ -133,6 +145,10 @@
     margin: 0;
     width: 25%;
     transform: scale(0.5);
+  }
+
+  .editor__control svg {
+    fill: $secondary-color;
   }
 
   .editor__scale {

@@ -13,21 +13,47 @@
   margin-bottom: 37px;
 }
 
+.page-footer__logo svg {
+  fill: $primary-color;
+
+  &:hover {
+    fill: $secondary-color
+  }
+
+  &:active {
+    fill: $primary-color;
+    opacity: 0.3;
+  }
+}
+
+.page-footer__logo-glasses-desktop,
+.page-footer__logo-stars {
+  display: none;
+}
+
 .page-footer__copyright {
-  margin-top: 46px;
+  margin-top: 35px;
   font-size: px2rem(14);
   @include line-height(14, 18);
   color: $primary-color;
 
   a {
+    display: inline-block;
     margin-left: 11px;
     font-size: 0;
+    vertical-align: middle;
+  }
+}
+
+.page-footer__copyright svg {
+  fill: $secondary-color;
+
+  &:hover {
+    fill: $primary-color;
   }
 
-  img {
-    margin-top: -5px;
-    display: inline-block;
-    vertical-align: middle;
+  &:active {
+    fill: rgba($primary-color, 0.3);
   }
 }
 
@@ -64,7 +90,7 @@
   }
 
   .page-footer__copyright {
-    margin: 21px 0 0;
+    margin: 13px 0 0;
   }
 }
 
@@ -77,6 +103,15 @@
 @media #{$desktop-widths} {
   .page-footer__wrap {
     padding: 70px 0 72px;
+  }
+
+  .page-footer__logo-glasses {
+    display: none;
+  }
+
+  .page-footer__logo-glasses-desktop,
+  .page-footer__logo-stars {
+    display: block;
   }
 
   .page-footer__social {
