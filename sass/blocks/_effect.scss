@@ -11,7 +11,28 @@
 @media #{$tablet-widths} {
   .effect {
     display: block;
+  }
+
+  .effect__wrap {
+    position: relative;
     padding: 96px $tablet-horizontal-margin 70px;
+
+    &::before {
+      content: "24";
+      position: absolute;
+      top: 60px;
+      left: $tablet-horizontal-margin;
+      display: block;
+      @include size(238px, 277px);
+      font-size: px2rem(96);
+      line-height: 300px;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: bottom;
+      color: $secondary-color;
+      background: url("./../img/icon-timer-2.svg") no-repeat 0 0;
+      background-size: 238px;
+    }
   }
 
   .effect__inner {
@@ -53,11 +74,23 @@
 
 @media #{$desktop-widths} {
   .effect {
-    padding: 157px 0 114px;
     background-color: #f2f2f2;
 
     br {
       display: none;
+    }
+  }
+
+  .effect__wrap {
+    padding: 157px 0 114px;
+
+    &::before {
+      top: 65px;
+      left: 0;
+      font-size: px2rem(120);
+      line-height: 380px;
+      @include size(300px, 345px);
+      background-size: 300px;
     }
   }
 

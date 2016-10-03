@@ -67,13 +67,10 @@
   .panorama {
     padding-bottom: 50px;
   }
-  .panorama__image {
-    min-height: 509px;
 
-    &::before{
-      top: 57px;
-      right: $tablet-horizontal-margin;
-    }
+  .panorama__image::before {
+    top: 57px;
+    right: $tablet-horizontal-margin;
   }
 
   .panorama__wraper {
@@ -106,6 +103,10 @@
 ***
 **/
 @media #{$desktop-widths} {
+  .panorama {
+    padding-top: 2px;
+  }
+
   .panorama__wraper {
     margin: 0 auto;
     max-width: 940px;

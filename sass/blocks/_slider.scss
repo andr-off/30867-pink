@@ -44,23 +44,14 @@
 }
 
 .slider__arrow {
-  position: relative;
-  @include size(22px, 41px);
+  @include size(22px, 43px);
+  fill: rgba($primary-color, 0.3);
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 6px;
-    left: 5px;
-    display: block;
-    @include size(25px);
-    border: 3px solid #bec2c7;
-    border-top: none;
-    border-right: none;
-    transform: rotate(45deg);
+  &:hover {
+    fill: rgba($primary-color, 0.6);
   }
 
-  &--right {
-    transform: rotate(180deg);
+  &:active {
+    fill: rgba($primary-color, 0.1);
   }
 }
