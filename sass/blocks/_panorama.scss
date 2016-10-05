@@ -58,11 +58,10 @@
   background: url("./../img/icon-heart.svg") no-repeat 0 50%;
 }
 
-/******
-*****
-**** Стили для планшетной версии
-***
-**/
+
+
+// Стили для планшетной версии
+
 @media #{$tablet-widths} {
   .panorama {
     padding-bottom: 50px;
@@ -97,11 +96,9 @@
 }
 
 
-/******
-*****
-**** Стили для десктопной версии
-***
-**/
+
+// Стили для десктопной версии
+
 @media #{$desktop-widths} {
   .panorama {
     padding-top: 2px;

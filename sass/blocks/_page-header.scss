@@ -44,7 +44,10 @@
   display: none;
 }
 
+
+
 // Стили только для мобильной и планшетной версии
+
 @media #{$mobile-and-tablet} {
   .page-header--open-nav,
   .page-header--nojs {
@@ -52,11 +55,9 @@
   }
 }
 
-/******
-*****
-**** Стили для планшетной версии
-***
-**/
+
+
+// Стили для планшетной версии
 
 @media #{$tablet-widths} {
   .page-header {
@@ -90,7 +91,7 @@
   .page-header__wrap {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 0 $tablet-horizontal-margin;
     min-height: 110px;
   }
@@ -102,11 +103,9 @@
   }
 }
 
-/******
-*****
-**** Стили для десктопной версии
-***
-**/
+
+
+// Стили для десктопной версии
 
 @media #{$desktop-widths} {
   .page-header {

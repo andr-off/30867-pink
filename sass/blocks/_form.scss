@@ -247,11 +247,9 @@
   text-align: center;
 }
 
-/******
-*****
-**** Стили для планшетной версии
-***
-**/
+
+
+// Стили для планшетной версии
 
 @media #{$tablet-widths} {
   .form {
@@ -423,18 +421,19 @@
   }
 }
 
+
+
 // Промежуточный брейкопоинт
+
 @media (min-width: 1075px) {
   .form__personal-data .form__input {
     width: 89%;
   }
 }
 
-/******
-*****
-**** Стили для десктопной версии
-***
-**/
+
+
+// Стили для десктопной версии
 
 @media #{$desktop-widths} {
   .form {
@@ -502,7 +501,7 @@
   }
 
   .form__achievements {
-    padding: 52px 48px 55px 58px;
+    padding: 52px 48px 12px 58px;
     width: 100%;
   }
 
@@ -514,28 +513,33 @@
 // Сделал так, чтобы соответствовало макету
   .form__achievements .form__checkbox-description:nth-of-type(2) {
     order: 4;
-    margin-bottom: 0;
+    // margin-bottom: 0;
   }
 
-  .form__achievements .form__checkbox-description:nth-of-type(3) {
-    margin-left: 57px;
-    margin-bottom: 0;
-  }
+  // .form__achievements .form__checkbox-description:nth-of-type(3) {
+  //   margin-left: 57px;
+  //   margin-bottom: 0;
+  // }
 
   .form__achievements .form__checkbox-description:nth-of-type(4) {
     order: 5;
-    margin-left: 96px;
-    margin-bottom: 0;
+    // margin-left: 96px;
+    // margin-bottom: 0;
   }
 
-  .form__achievements .form__checkbox-description:nth-of-type(5) {
-    margin-left: 65px;
-    margin-bottom: 0;
-  }
+  // .form__achievements .form__checkbox-description:nth-of-type(5) {
+  //   margin-left: 65px;
+  //   margin-bottom: 0;
+  // }
 
   .form__achievements .form__checkbox-description:nth-of-type(6) {
     order: 6;
-    margin-left: 74px;
+    // margin-left: 74px;
+  }
+
+  .form__checkbox-description {
+    box-sizing: border-box;
+    width: 33%;
   }
 
   .form__your-emotions {

@@ -68,7 +68,10 @@
   box-shadow: 0px -1px 0px 0px black;
 }
 
+
+
 // Стили только для мобильной и планшетной весии
+
 @media (max-width: 899px) {
   .main-nav--closed .main-nav__items {
     display: none;
@@ -84,11 +87,9 @@
   }
 }
 
-/******
-*****
-**** Стили для планшетной версии
-***
-**/
+
+
+// Стили для планшетной версии
 
 @media #{$tablet-widths} {
   .main-nav__toggle {
@@ -98,11 +99,9 @@
 
 }
 
-/******
-*****
-**** Стили для десктопной версии
-***
-**/
+
+
+// Стили для десктопной версии
 
 @media (min-width: 900px) {
   .main-nav {
@@ -112,6 +111,7 @@
   .main-nav__items {
     display: flex;
     justify-content: flex-end;
+    margin-top: 32px;
   }
 
   .main-nav__item:not(:last-child) {
