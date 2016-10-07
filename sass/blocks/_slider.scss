@@ -39,8 +39,8 @@
 .slider__toggle--active:active::after {
   top: 5px;
   left: 5px;
-  background-color: white;
   border: 3px solid $primary-color;
+  background-color: white;
 }
 
 .slider__arrow {

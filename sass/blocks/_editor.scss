@@ -30,7 +30,9 @@
 }
 
 .editor__control {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @include size(48px);
   background-position: center center;
   background-repeat: no-repeat;
@@ -38,13 +40,6 @@
   &:not(:last-of-type) {
     margin-right: 30px;
   }
-}
-
-.editor__control svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .editor__scale {
@@ -92,16 +87,17 @@
 
 // Стили только для мобильной версии
 
-@media (max-width: 699px) {
+@media (max-width: 659px) {
   .editor__control svg {
     fill: rgba($primary-color, 0.3);
-
-    &:hover {
-      fill: rgba($primary-color, 0.5);
-    }
   }
 
-  .editor__control--active svg {
+  .editor__control:hover svg {
+    fill: rgba($primary-color, 0.5);
+  }
+
+  .editor__control--active svg,
+  .editor__control--active:hover svg {
     fill: $secondary-color;
   }
 }

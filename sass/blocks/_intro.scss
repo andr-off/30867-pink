@@ -3,11 +3,6 @@
   text-align: center;
   background: #1d2631 url("./../img/bg-back-mobile@1x.jpg") no-repeat center top;
 
-  @media #{$retina} {
-    background-image: url("./../img/bg-back-mobile@2x.jpg");
-    background-size: 700px;
-  }
-
   &--index-page::after {
     content: "";
     position: absolute;
@@ -53,7 +48,7 @@
 
 .intro__icon {
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: middle;
 
   &:not(:last-child) {
     margin-right: 35px;
@@ -101,10 +96,12 @@
 
   .intro--index-page::after {
     top: auto;
-    left: 50%;
+    left: 100% - $tablet-horizontal-margin;
     bottom: 0;
-    @include size(700px, 545px);
+    transform: translate(-100%);
+    @include size(470px, 545px);
     background-image: url("./../img/iphone-hand-tablet@1x.png");
+    background-position: calc(50% - 73px) 0;
 
     @media #{$retina} {
       background-image: url("./../img/iphone-hand-tablet@2x.png");
@@ -167,8 +164,8 @@
   }
 
   .intro--index-page::after {
-    left: calc(50% + 71px);
-    @include size(1050px, 645px);
+    left: calc(100% - 50px);
+    @include size(570px, 645px);
     background-image: url("./../img/iphone-hand-desktop@1x.png");
 
     @media #{$retina} {
@@ -201,5 +198,12 @@
   .intro__icons {
     margin-top: 65px;
     margin-bottom: 59px;
+  }
+}
+
+@media #{$retina} {
+  .intro {
+    background-image: url("./../img/bg-back-mobile@2x.jpg");
+    background-size: 700px;
   }
 }

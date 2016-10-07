@@ -75,11 +75,11 @@
   }
 
   .photos__wraper {
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-start;
-    box-sizing: border-box;
     margin: 0;
     padding: 24px 28px 22px;
     min-height: 155px;

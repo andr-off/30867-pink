@@ -32,7 +32,6 @@
 
 .main-nav--opened .main-nav__toggle {
   @include size(24px);
-  // background: url("./../img/icon-menu-cross.svg");
 }
 
 .main-nav--opened .main-nav__toggle-burger {
@@ -41,7 +40,6 @@
 
 .main-nav--closed .main-nav__toggle{
   @include size(50px, 24px);
-  // background: url("./../img/icon-menu-burger.svg");
 }
 
 .main-nav--closed .main-nav__toggle-cross {
@@ -96,7 +94,6 @@
     top: -66px;
     right: $tablet-horizontal-margin;
   }
-
 }
 
 

@@ -11,8 +11,8 @@
 }
 
 .plans__item {
-  width: 100%;
   display: none;
+  width: 100%;
 
   &:nth-child(3) {
     display: block;
@@ -113,23 +113,23 @@
   padding-top: 35px;
 }
 
-@media (max-width: 699px) {
+@media (max-width: 659px) {
   .plans {
     overflow: hidden;
   }
 
-  .plans__left-item,
-  .plans__right-item {
+  .plans__item--left,
+  .plans__item--right {
     position: absolute;
     top: 0;
     display: block;
   }
 
-  .plans__left-item {
+  .plans__item--left {
     left: -100%;
   }
 
-  .plans__right-item {
+  .plans__item--right {
     right: -100%;
   }
 }
@@ -150,8 +150,8 @@
   }
 
   .plans__item {
-    display: block;
     box-sizing: border-box;
+    display: block;
     margin: 0;
     width: 25%;
   }

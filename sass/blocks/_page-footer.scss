@@ -15,15 +15,23 @@
 
 .page-footer__logo svg {
   fill: $primary-color;
+}
 
-  &:hover {
-    fill: $secondary-color
-  }
+.page-footer__logo:hover svg {
+  fill: $secondary-color
+}
 
-  &:active {
-    fill: $primary-color;
-    opacity: 0.3;
-  }
+.page-footer__logo:active svg {
+  fill: $primary-color;
+  opacity: 0.3;
+}
+
+.page-footer__logo--index-page:hover svg {
+  fill: $primary-color;
+}
+
+.page-footer__logo--index-page:active svg {
+  opacity: 1;
 }
 
 .page-footer__logo-glasses-desktop,
@@ -47,14 +55,14 @@
 
 .page-footer__copyright svg {
   fill: $secondary-color;
+}
 
-  &:hover {
-    fill: $primary-color;
-  }
+.page-footer__copyright a:hover svg {
+  fill: $primary-color;
+}
 
-  &:active {
-    fill: rgba($primary-color, 0.3);
-  }
+.page-footer__copyright a:active svg {
+  fill: rgba($primary-color, 0.3);
 }
 
 

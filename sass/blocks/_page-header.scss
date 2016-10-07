@@ -11,31 +11,30 @@
   display: inline-block;
   margin-left: $mobile-horizontal-margin;
   margin-bottom: 21px;
+  vertical-align: top;
 }
 
 .page-header__logo svg {
   position: relative;
   right: 71px;
   fill: white;
-
-  &:hover {
-    fill: $secondary-color
-  }
-
-  &:active {
-    fill: white;
-    opacity: 0.3;
-  }
 }
 
-.page-header__logo--index-page svg {
-  &:hover {
-    fill: white;
-  }
+.page-header__logo:hover svg {
+  fill: $secondary-color
+}
 
-  &:active {
-    opacity: 1;
-  }
+.page-header__logo:active svg {
+  fill: white;
+  opacity: 0.3;
+}
+
+.page-header__logo--index-page:hover svg {
+  fill: white;
+}
+
+.page-header__logo--index-page:active svg {
+  opacity: 1;
 }
 
 .page-header__logo-glasses-desktop,
@@ -61,8 +60,8 @@
 
 @media #{$tablet-widths} {
   .page-header {
-    padding-top: 26px;
     margin-bottom: -110px;
+    padding-top: 26px;
   }
 
   .page-header__logo {
