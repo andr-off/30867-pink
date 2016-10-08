@@ -11,11 +11,6 @@
     transform: translate(-50%);
     @include size(258px, 286px);
     background: url("./../img/iphone-hand-mobile@1x.png") no-repeat 0 0;
-
-    @media #{$retina} {
-      background-image: url("./../img/iphone-hand-mobile@2x.png");
-      background-size: 258px;
-    }
   }
 }
 
@@ -88,10 +83,10 @@
   .intro {
     background-image: url("./../img/bg-back-tablet@1x.jpg");
 
-    @media #{$retina} {
-      background-image: url("./../img/bg-back-tablet@2x.jpg");
-      background-size: 1200px;
-    }
+    // @media #{$retina} {
+    //   background-image: url("./../img/bg-back-tablet@2x.jpg");
+    //   background-size: 1200px;
+    // }
   }
 
   .intro--index-page::after {
@@ -103,10 +98,10 @@
     background-image: url("./../img/iphone-hand-tablet@1x.png");
     background-position: calc(50% - 73px) 0;
 
-    @media #{$retina} {
-      background-image: url("./../img/iphone-hand-tablet@2x.png");
-      background-size: 700px;
-    }
+    // @media #{$retina} {
+    //   background-image: url("./../img/iphone-hand-tablet@2x.png");
+    //   background-size: 700px;
+    // }
   }
 
   .intro--index-page .intro__inner {
@@ -201,9 +196,33 @@
   }
 }
 
-@media #{$retina} {
-  .intro {
-    background-image: url("./../img/bg-back-mobile@2x.jpg");
-    background-size: 700px;
+
+// Стили для ретины
+
+@media (min-width: 320px) {
+  @media #{$retina} {
+    .intro {
+      background-image: url("./../img/bg-back-mobile@2x.jpg");
+      background-size: 700px;
+    }
+
+    .intro--index-page::after {
+      background-image: url("./../img/iphone-hand-mobile@2x.png");
+      background-size: 258px;
+    }
+  }
+}
+
+@media (min-width: 660px) {
+  @media #{$retina} {
+    .intro {
+      background-image: url("./../img/bg-back-tablet@2x.jpg");
+      background-size: 1200px;
+    }
+
+    .intro--index-page::after {
+      background-image: url("./../img/iphone-hand-tablet@2x.png");
+      background-size: 700px;
+    }
   }
 }

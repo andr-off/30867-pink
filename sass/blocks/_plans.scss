@@ -97,6 +97,7 @@
     right: 17px;
     @include size(30px, 21px);
     background: url("./../img/icon-yes.svg") no-repeat 0 0;
+    background-size: 30px;
   }
 
   &--not-available:after {

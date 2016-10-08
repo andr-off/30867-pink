@@ -114,3 +114,13 @@
     right: $desktop-horizontal-margin;
   }
 }
+
+
+
+// Промежуточный брейкпоинт
+
+@media (min-width: 1200px) {
+  .panorama__image::before {
+    right: 130px;
+  }
+}

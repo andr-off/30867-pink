@@ -341,7 +341,6 @@
   }
 
   .form__footnote {
-    // float: right;
     margin-top: 17px;
   }
 
@@ -379,7 +378,7 @@
   }
 
   .form__personal-data .form__input:not(:last-child) {
-    margin: 0;
+    // margin: 0;
   }
 
   .form__what-app {
@@ -444,16 +443,6 @@
 
 
 
-// Промежуточный брейкопоинт
-
-@media (min-width: 1075px) {
-  .form__personal-data .form__input {
-    width: 89%;
-  }
-}
-
-
-
 // Стили для десктопной версии
 
 @media #{$desktop-widths} {
@@ -487,8 +476,16 @@
     margin-right: 18px;
   }
 
+  .form__personal-data .form__label-for-text-input:not(:last-of-type) {
+    margin-bottom: 60px;
+  }
+
   .form__personal-data .form__input {
     width: 340px;
+  }
+
+  .form__personal-data .form__input:not(:last-of-type) {
+    margin-bottom: 60px;
   }
 
   .form__what-app {
