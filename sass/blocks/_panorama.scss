@@ -14,7 +14,6 @@
     content: attr(data-value);
     position: absolute;
     top: 0;
-    right: $mobile-horizontal-margin;
     padding: 6px 20px;
     font-size: px2rem(12);
     @include line-height(12, 24);
@@ -70,7 +69,7 @@
 
   .panorama__image::before {
     top: 57px;
-    right: $tablet-horizontal-margin;
+    right: calc(((100vw - 660px) / 2) + 20px);
   }
 
   .panorama__wraper {
@@ -111,16 +110,6 @@
   }
 
   .panorama__image::before {
-    right: $desktop-horizontal-margin;
-  }
-}
-
-
-
-// Промежуточный брейкпоинт
-
-@media (min-width: 1200px) {
-  .panorama__image::before {
-    right: 130px;
+    right: calc(((100vw - 940px) / 2) + 10px);;
   }
 }
