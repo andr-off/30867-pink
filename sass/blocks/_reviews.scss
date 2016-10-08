@@ -39,11 +39,9 @@
   padding-top: 28px;
 }
 
-/******
-*****
-**** Стили для планшетной версии
-***
-**/
+
+
+// Стили для планшетной версии
 
 @media #{$tablet-widths} {
   .reviews {
@@ -70,6 +68,7 @@
   }
 
   .reviews__quote {
+    align-self: center;
     margin: 0 auto;
     max-width: 735px;
     font-size: px2rem(18);
@@ -81,11 +80,9 @@
   }
 }
 
-/******
-*****
-**** Стили для десктопной версии
-***
-**/
+
+
+// Стили для десктопной версии
 
 @media #{$desktop-widths} {
   .reviews {

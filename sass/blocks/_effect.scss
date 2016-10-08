@@ -2,11 +2,9 @@
   display: none;
 }
 
-/******
-*****
-**** Стили для планшетной версии
-***
-**/
+
+
+// Стили для планшетной версии
 
 @media #{$tablet-widths} {
   .effect {
@@ -66,11 +64,9 @@
   }
 }
 
-/******
-*****
-**** Стили для десктопной версии
-***
-**/
+
+
+// Стили для десктопной версии
 
 @media #{$desktop-widths} {
   .effect {
@@ -87,9 +83,9 @@
     &::before {
       top: 65px;
       left: 0;
+      @include size(300px, 345px);
       font-size: px2rem(120);
       line-height: 380px;
-      @include size(300px, 345px);
       background-size: 300px;
     }
   }

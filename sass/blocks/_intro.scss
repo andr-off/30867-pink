@@ -3,24 +3,13 @@
   text-align: center;
   background: #1d2631 url("./../img/bg-back-mobile@1x.jpg") no-repeat center top;
 
-  @media #{$retina} {
-    background-image: url("./../img/bg-back-mobile@2x.jpg");
-    background-size: 700px;
-  }
-
   &--index-page::after {
     content: "";
     position: absolute;
-    left: calc(50% - 30px);
+    left: 0;
     top: 176px;
-    transform: translate(-50%);
     @include size(258px, 286px);
     background: url("./../img/iphone-hand-mobile@1x.png") no-repeat 0 0;
-
-    @media #{$retina} {
-      background-image: url("./../img/iphone-hand-mobile@2x.png");
-      background-size: 258px;
-    }
   }
 }
 
@@ -53,7 +42,7 @@
 
 .intro__icon {
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: middle;
 
   &:not(:last-child) {
     margin-right: 35px;
@@ -85,33 +74,23 @@
   }
 }
 
-/******
-*****
-**** Стили для планшетной версии
-***
-**/
+
+
+// Стили для планшетной версии
 
 @media #{$tablet-widths} {
   .intro {
     background-image: url("./../img/bg-back-tablet@1x.jpg");
-
-    @media #{$retina} {
-      background-image: url("./../img/bg-back-tablet@2x.jpg");
-      background-size: 1200px;
-    }
   }
 
   .intro--index-page::after {
     top: auto;
-    left: 50%;
+    left: auto;
+    right: $tablet-horizontal-margin;
     bottom: 0;
-    @include size(700px, 545px);
+    @include size(470px, 545px);
     background-image: url("./../img/iphone-hand-tablet@1x.png");
-
-    @media #{$retina} {
-      background-image: url("./../img/iphone-hand-tablet@2x.png");
-      background-size: 700px;
-    }
+    background-position: -190px 0;
   }
 
   .intro--index-page .intro__inner {
@@ -153,11 +132,9 @@
   }
 }
 
-/******
-*****
-**** Стили для десктопной версии
-***
-**/
+
+
+// Стили для десктопной версии
 
 @media #{$desktop-widths} {
   .intro {
@@ -171,9 +148,10 @@
   }
 
   .intro--index-page::after {
-    left: calc(50% + 71px);
-    @include size(1050px, 645px);
+    right: 34px / 960px * 100%;
+    @include size(570px, 645px);
     background-image: url("./../img/iphone-hand-desktop@1x.png");
+    background-position: -330px 0;
 
     @media #{$retina} {
       background-image: url("./../img/iphone-hand-desktop@2x.png");
@@ -205,5 +183,36 @@
   .intro__icons {
     margin-top: 65px;
     margin-bottom: 59px;
+  }
+}
+
+
+// Стили для ретины
+
+@media (min-width: 320px) {
+  @media #{$retina} {
+    .intro {
+      background-image: url("./../img/bg-back-mobile@2x.jpg");
+      background-size: 700px;
+    }
+
+    .intro--index-page::after {
+      background-image: url("./../img/iphone-hand-mobile@2x.png");
+      background-size: 258px;
+    }
+  }
+}
+
+@media (min-width: 660px) {
+  @media #{$retina} {
+    .intro {
+      background-image: url("./../img/bg-back-tablet@2x.jpg");
+      background-size: 1200px;
+    }
+
+    .intro--index-page::after {
+      background-image: url("./../img/iphone-hand-tablet@2x.png");
+      background-size: 700px;
+    }
   }
 }

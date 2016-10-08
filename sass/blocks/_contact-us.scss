@@ -1,9 +1,9 @@
 .contact-us__wrap {
-  padding: 38px $mobile-horizontal-margin 0;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 38px $mobile-horizontal-margin 0;
+  text-align: center;
 }
 
 .contact-us__title {
@@ -58,21 +58,28 @@
 }
 
 .contact-us__map {
+  position: relative;
   height: 200px;
   background-image:
     url("./../img/icon-map-marker.svg"),
-    url("./../img/bg-triangle-white-footer.svg"),
     url("./../img/bg-map-mobile@1x.png");
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 50% 58%, 50% 0, 50% 0;
-  background-size: auto, 100%, 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 50% 58%, 50% 0;
+  background-size: auto, 100%;
+
+  img {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    z-index: 5000;
+    display: block;
+    width: 100%;
+  }
 }
 
-/******
-*****
-**** Стили для планшетной версии
-***
-**/
+
+
+// Стили для планшетной версии
 
 @media #{$tablet-widths} {
   .contact-us__wrap {
@@ -115,18 +122,15 @@
     height: 378px;
     background-image:
       url("./../img/icon-map-marker.svg"),
-      url("./../img/bg-triangle-white-footer.svg"),
       url("./../img/bg-map-tablet@1x.jpg");
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: 50% 58%, 50% 0, 50% 0;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50% 58%, 50% 0;
   }
 }
 
-/******
-*****
-**** Стили для десктопной версии
-***
-**/
+
+
+// Стили для десктопной версии
 
 @media #{$desktop-widths} {
   .contact-us__wrap {
@@ -156,9 +160,8 @@
     height: 503px;
     background-image:
       url("./../img/icon-map-marker.svg"),
-      url("./../img/bg-triangle-white-footer.svg"),
       url("./../img/bg-map-desktop@1x.jpg");
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: 50% 57%, 50% 0, 50% 0;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50% 57%, 50% 0;
   }
 }

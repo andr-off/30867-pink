@@ -6,6 +6,7 @@
   color: $primary-color;
   text-align: center;
 }
+
 .panorama__image {
     position: relative;
 
@@ -58,11 +59,10 @@
   background: url("./../img/icon-heart.svg") no-repeat 0 50%;
 }
 
-/******
-*****
-**** Стили для планшетной версии
-***
-**/
+
+
+// Стили для планшетной версии
+
 @media #{$tablet-widths} {
   .panorama {
     padding-bottom: 50px;
@@ -97,11 +97,9 @@
 }
 
 
-/******
-*****
-**** Стили для десктопной версии
-***
-**/
+
+// Стили для десктопной версии
+
 @media #{$desktop-widths} {
   .panorama {
     padding-top: 2px;
@@ -114,5 +112,15 @@
 
   .panorama__image::before {
     right: $desktop-horizontal-margin;
+  }
+}
+
+
+
+// Промежуточный брейкпоинт
+
+@media (min-width: 1200px) {
+  .panorama__image::before {
+    right: 130px;
   }
 }

@@ -50,11 +50,9 @@
   margin-bottom: 20px;
 }
 
-/******
-*****
-**** Стили для планшетной версии
-***
-**/
+
+
+// Стили для планшетной версии
 
 @media #{$tablet-widths} {
   .photos {
@@ -77,11 +75,11 @@
   }
 
   .photos__wraper {
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-start;
-    box-sizing: border-box;
     margin: 0;
     padding: 24px 28px 22px;
     min-height: 155px;
@@ -100,7 +98,10 @@
   }
 }
 
+
+
 // Промежуточный брейкопоинт
+
 @media (min-width: 940px) {
   .photos .photos__item {
     margin-right: 20px;
@@ -111,11 +112,9 @@
   }
 }
 
-/******
-*****
-**** Стили для планшетной версии
-***
-**/
+
+
+// Стили для планшетной версии
 
 @media #{$desktop-widths} {
   .photos__item:not(:last-child) {

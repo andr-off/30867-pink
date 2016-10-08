@@ -11,8 +11,8 @@
 }
 
 .plans__item {
-  width: 100%;
   display: none;
+  width: 100%;
 
   &:nth-child(3) {
     display: block;
@@ -97,6 +97,7 @@
     right: 17px;
     @include size(30px, 21px);
     background: url("./../img/icon-yes.svg") no-repeat 0 0;
+    background-size: 30px;
   }
 
   &--not-available:after {
@@ -113,32 +114,30 @@
   padding-top: 35px;
 }
 
-@media (max-width: 699px) {
+@media (max-width: 659px) {
   .plans {
     overflow: hidden;
   }
 
-  .plans__left-item,
-  .plans__right-item {
+  .plans__item--left,
+  .plans__item--right {
     position: absolute;
     top: 0;
     display: block;
   }
 
-  .plans__left-item {
+  .plans__item--left {
     left: -100%;
   }
 
-  .plans__right-item {
+  .plans__item--right {
     right: -100%;
   }
 }
 
-/******
-*****
-**** Стили для планшетной версии
-***
-**/
+
+
+// Стили для планшетной версии
 
 @media #{$tablet-widths} {
   .plans {
@@ -152,8 +151,8 @@
   }
 
   .plans__item {
-    display: block;
     box-sizing: border-box;
+    display: block;
     margin: 0;
     width: 25%;
   }
@@ -218,11 +217,9 @@
   }
 }
 
-/******
-*****
-**** Стили для десктопной версии
-***
-**/
+
+
+// Стили для десктопной версии
 
 @media #{$desktop-widths} {
   .plans {
